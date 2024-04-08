@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <title>Invos Web UI kit</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading-lg">Invos Web UI kit</h1>
+        <section id="section-button">
+            <h3 class="heading-md title">Button</h3>
+            <div id="btn-sizes">
+                <h5 class="heading-xs subtitle">Button sizes</h5>
+                <div class="flex-container">
+                    <button type="button" class="btn btn-primary btn-lg">
+                        <span>button</span>
+                    </button>
+                    <button type="button" class="btn btn-primary btn-md">
+                        <span>button</span>
+                    </button>
+                    <button type="button" class="btn btn-primary btn-sm">
+                        <span>button</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="btn-variants">
+                <h5 class="heading-xs subtitle">Button variants</h5>
+                <div class="flex-container">
+                    <button type="button" class="btn btn-primary btn-lg">
+                        <span>button</span>
+                    </button>
+                    <button type="button" class="btn btn-neutral btn-lg">
+                        <span>button</span>
+                    </button>
+                    <button type="button" class="btn btn-prize btn-lg">
+                        <span>button</span>
+                    </button>
+                    <button type="button" class="btn btn-danger btn-lg">
+                        <span>button</span>
+                    </button>
+                    <button type="button" class="btn btn-outline btn-lg">
+                        <span>button</span>
+                    </button>
+                    <button type="button" class="btn btn-ghost btn-lg">
+                        <span>button</span>
+                    </button>
+                    <button type="button" class="btn btn-text btn-lg">
+                        <span>button</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="btn-with-icon">
+                <h5 class="heading-xs subtitle">Button with icon</h5>
+                <div class="flex-container">
+                    <button type="button" class="btn btn-primary btn-lg">
+                        <i class="icon icon-plus"></i>
+                        <span>button</span>
+                    </button>
+                    <button type="button" class="btn btn-primary btn-lg">
+                        <i class="icon icon-trash-can"></i>
+                        <span>button</span>
+                    </button>
+                    <button type="button" class="btn btn-primary btn-lg">
+                        <i class="icon icon-arrow-left"></i>
+                        <span>button</span>
+                        <i class="icon icon-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="btn-disable-state">
+                <h5 class="heading-xs subtitle">Button disable state</h5>
+                <div class="flex-container">
+                    <button type="button" class="btn btn-primary btn-lg disabled" disabled>
+                        <span>button</span>
+                    </button>
+                    <button type="button" class="btn btn-neutral btn-lg" disabled>
+                        <span>button</span>
+                    </button>
+                    <button type="button" class="btn btn-prize btn-lg" disabled>
+                        <span>button</span>
+                    </button>
+                    <button type="button" class="btn btn-danger btn-lg" disabled>
+                        <span>button</span>
+                    </button>
+                    <button type="button" class="btn btn-outline btn-lg" disabled>
+                        <span>button</span>
+                    </button>
+                    <button type="button" class="btn btn-ghost btn-lg" disabled>
+                        <span>button</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="btn-loading-state">
+                <h5 class="heading-xs subtitle">Button loading state</h5>
+                <div class="flex-container">
+                    <button type="button" class="btn btn-primary btn-lg loading">
+                        <span>button</span>
+                    </button>
+                    <button type="button" class="btn btn-neutral btn-lg loading">
+                        <span>button</span>
+                    </button>
+                    <button type="button" class="btn btn-prize btn-lg loading">
+                        <span>button</span>
+                    </button>
+                    <button type="button" class="btn btn-danger btn-lg loading">
+                        <span>button</span>
+                    </button>
+                    <button type="button" class="btn btn-outline btn-lg loading">
+                        <span>button</span>
+                    </button>
+                    <button type="button" class="btn btn-ghost btn-lg loading">
+                        <span>button</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="btn-block">
+                <h5 class="heading-xs subtitle">Block button</h5>
+                <div class="flex-container">
+                    <button type="button" class="btn btn-primary btn-lg btn-block">
+                        <span>button</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="btn-grouping">
+                <h5 class="heading-xs subtitle">Grouping buttons</h5>
+                <div class="flex-container">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary btn-lg">
+                            <span>button</span>
+                        </button>
+                        <button type="button" class="btn btn-neutral btn-lg">
+                            <span>button</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /section-button -->
+
+        <section id="section-icon-button">
+            <h3 class="heading-md title">Icon button</h3>
+            <div id="icon-btn-sizes">
+                <h5 class="heading-xs subtitle">Icon button sizes</h5>
+                <div class="flex-container">
+                    <button type="button" class="btn-icon btn-primary btn-lg">
+                        <i class="icon icon-plus"></i>
+                    </button>
+                    <button type="button" class="btn-icon btn-primary btn-md">
+                        <i class="icon icon-plus"></i>
+                    </button>
+                    <button type="button" class="btn-icon btn-primary btn-sm">
+                        <i class="icon icon-plus"></i>
+                    </button>
+                    <button type="button" class="btn-icon btn-primary btn-xs">
+                        <i class="icon icon-plus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="icon-btn-variants">
+                <h5 class="heading-xs subtitle">Icon button variants</h5>
+                <div class="flex-container">
+                    <button type="button" class="btn-icon btn-primary btn-lg">
+                        <i class="icon icon-plus"></i>
+                    </button>
+                    <button type="button" class="btn-icon btn-neutral btn-lg">
+                        <i class="icon icon-plus"></i>
+                    </button>
+                    <button type="button" class="btn-icon btn-danger btn-lg">
+                        <i class="icon icon-plus"></i>
+                    </button>
+                    <button type="button" class="btn-icon btn-prize btn-lg">
+                        <i class="icon icon-plus"></i>
+                    </button>
+                    <button type="button" class="btn-icon btn-outline btn-lg">
+                        <i class="icon icon-plus"></i>
+                    </button>
+                    <button type="button" class="btn-icon btn-ghost btn-lg">
+                        <i class="icon icon-plus"></i>
+                    </button>
+                    <button type="button" class="btn-icon btn-ghost-neutral btn-lg">
+                        <i class="icon icon-plus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="icon-btn-disable-state">
+                <h5 class="heading-xs subtitle">Icon button disable state</h5>
+                <div class="flex-container">
+                    <button type="button" class="btn-icon btn-primary btn-icon-lg disabled" disabled>
+                        <i class="icon icon-plus"></i>
+                    </button>
+                    <button type="button" class="btn-icon btn-neutral btn-lg" disabled>
+                        <i class="icon icon-plus"></i>
+                    </button>
+                    <button type="button" class="btn-icon btn-danger btn-lg" disabled>
+                        <i class="icon icon-plus"></i>
+                    </button>
+                    <button type="button" class="btn-icon btn-prize btn-lg" disabled>
+                        <i class="icon icon-plus"></i>
+                    </button>
+                    <button type="button" class="btn-icon btn-outline btn-lg" disabled>
+                        <i class="icon icon-plus"></i>
+                    </button>
+                    <button type="button" class="btn-icon btn-ghost btn-lg" disabled>
+                        <i class="icon icon-plus"></i>
+                    </button>
+                    <button type="button" class="btn-icon btn-ghost-neutral btn-lg" disabled>
+                        <i class="icon icon-plus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="icon-btn-loading-state">
+                <h5 class="heading-xs subtitle">Icon button loading state</h5>
+                <div class="flex-container">
+                    <button type="button" class="btn-icon btn-primary btn-lg loading">
+                        <i class="icon icon-plus"></i>
+                    </button>
+                    <button type="button" class="btn-icon btn-neutral btn-lg loading">
+                        <i class="icon icon-plus"></i>
+                    </button>
+                    <button type="button" class="btn-icon btn-danger btn-lg loading">
+                        <i class="icon icon-plus"></i>
+                    </button>
+                    <button type="button" class="btn-icon btn-prize btn-lg loading">
+                        <i class="icon icon-plus"></i>
+                    </button>
+                    <button type="button" class="btn-icon btn-outline btn-lg loading">
+                        <i class="icon icon-plus"></i>
+                    </button>
+                    <button type="button" class="btn-icon btn-ghost btn-lg loading">
+                        <i class="icon icon-plus"></i>
+                    </button>
+                    <button type="button" class="btn-icon btn-ghost-neutral btn-lg loading">
+                        <i class="icon icon-plus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="icon-btn-fab">
+                <h5 class="heading-xs subtitle">Float action button (FAB)</h5>
+                <div class="flex-container">
+                    <button type="button" class="btn-icon btn-fab btn-primary">
+                        <i class="icon icon-plus"></i>
+                    </button>
+                    <button type="button" class="btn-icon btn-fab btn-primary loading">
+                        <i class="icon icon-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- /section-icon-button -->
+
+        <section id="section-input">
+            <h3 class="heading-md title">Input</h3>
+            <div id="input-text-field">
+                <h5 class="heading-xs subtitle">Text field</h5>
+                <div class="flex-container">
+                    <div class="input-container">
+                        <input type="text" class="input" id="carrier" placeholder="" value="" required>
+                        <label for="carrier" class="input-label">Label</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" class="input" id="carrier" placeholder="" value="Text" required>
+                        <label for="carrier" class="input-label">Label</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" class="input expand" id="carrier" placeholder="Placeholder" value="" required>
+                        <label for="carrier" class="input-label">Label</label>
+                    </div>
+                </div>
+            </div>
+
+            <div id="input-with-icon">
+                <h5 class="heading-xs subtitle">Input with icon</h5>
+                <div class="flex-container">
+                    <div class="input-container">
+                        <input type="text" class="input" id="carrier" placeholder="" value="" required>
+                        <label for="carrier" class="input-label">Label</label>
+                        <i class="icon icon-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div id="input-with-footer">
+                <h5 class="heading-xs subtitle">Input with footer</h5>
+                <div class="flex-container">
+                    <div class="input-container">
+                        <input type="text" class="input" id="carrier" placeholder="" value="" required>
+                        <label for="carrier" class="input-label">Label</label>
+                        <p class="input-footer">
+                            <i class="icon icon-alert-circle"></i>
+                            <span class="body-sm">Additional message</span>
+                        </p>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" class="input" id="carrier" placeholder="" value="" required>
+                        <label for="carrier" class="input-label">Label</label>
+                        <p class="input-footer align-right">
+                            <i class="icon icon-alert-circle"></i>
+                            <span class="body-sm">Additional message</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="input-error-state">
+                <h5 class="heading-xs subtitle">Input error state</h5>
+                <div class="flex-container">
+                    <div class="input-container">
+                        <input type="text" class="input error" id="carrier" placeholder="" value="" required>
+                        <label for="carrier" class="input-label">Label</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" class="input error" id="carrier" placeholder="" value="Text" required>
+                        <label for="carrier" class="input-label">Label</label>
+                        <i class="icon icon-plus"></i>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" class="input error" id="carrier" placeholder="" value="" required>
+                        <label for="carrier" class="input-label">Label</label>
+                        <p class="input-footer">
+                            <i class="icon icon-alert-circle-filled"></i>
+                            <span class="body-sm">Error message</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="input-disable-state">
+                <h5 class="heading-xs subtitle">Input disable state</h5>
+                <div class="flex-container">
+                    <div class="input-container">
+                        <input type="text" class="input disabled" id="carrier" placeholder="" value="" disabled>
+                        <label for="carrier" class="input-label">Label</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" class="input expand disabled" id="carrier" placeholder="" value="Text" disabled>
+                        <label for="carrier" class="input-label">Label</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" class="input expand disabled" id="carrier" placeholder="Placeholder" value="" disabled>
+                        <label for="carrier" class="input-label">Label</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" class="input disabled" id="carrier" placeholder="" value="" disabled>
+                        <label for="carrier" class="input-label">Label</label>
+                        <i class="icon icon-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /section-input -->
+
+        <section id="section-pin-input">
+            <h3 class="heading-md title">Pin input</h3>
+            <div id="pin-input-variant">
+                <h5 class="heading-xs subtitle">Pin input variants</h5>
+                <div class="flex-container">
+                    <input inputmode="numeric" type="tel" class="pin-input" maxlength="1" autocomplete="off">
+                    <input inputmode="numeric" type="tel" class="pin-input" value="1" maxlength="1" autocomplete="off">
+                    <input inputmode="numeric" type="tel" class="pin-input error" maxlength="1" autocomplete="off">
+                    <input inputmode="numeric" type="tel" class="pin-input disabled" value="1" maxlength="1" autocomplete="off">
+                </div>
+            </div>
+            <div id="pin-input-group">
+                <h5 class="heading-xs subtitle">Pin input group</h5>
+                <p>自動跳轉下一格</p>
+                <div class="flex-container">
+                    <div class="pin-input-container">
+                        <input inputmode="numeric" type="tel" class="pin-input" maxlength="1" autocomplete="off">
+                        <input inputmode="numeric" type="tel" class="pin-input" maxlength="1" autocomplete="off">
+                        <input inputmode="numeric" type="tel" class="pin-input" maxlength="1" autocomplete="off">
+                        <input inputmode="numeric" type="tel" class="pin-input" maxlength="1" autocomplete="off">
+                    </div>
+                    <script>
+                        $(document).ready(function(){
+                            //跳轉下一個驗證碼 input
+                            $('.pin-input-container .pin-input').keyup(function() {
+                                var maxLength = parseInt($(this).attr('maxlength'));
+                                var currentLength = $(this).val().length;
+                                
+                                if (currentLength >= maxLength) {
+                                    $(this).next('.pin-input').focus();
+                                }
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-checkbox">
+            <h3 class="heading-md title">Checkbox</h3>
+            <div id="checkbox-states">
+                <h5 class="heading-xs subtitle">Checkbox states</h5>
+                <div class="flex-container">
+                    <div class="checkbox-container">
+                        <input type="checkbox" class="checkbox" name="chbx1" id="chbx1">
+                        <label for="chbx1">Label</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" class="checkbox" name="chbx2" id="chbx2" checked>
+                        <label for="chbx2">Label</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" class="checkbox error" name="chbx3" id="chbx3">
+                        <label for="chbx3">Label</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" class="checkbox disabled" name="chbx4" id="chbx4">
+                        <label for="chbx4">Label</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" class="checkbox disabled" name="chbx5" id="chbx5" checked>
+                        <label for="chbx5">Label</label>
+                    </div>
+                </div>
+            </div>
+            <div id="input-checkbox-with">
+                <h5 class="heading-xs subtitle">Checkbox with description</h5>
+                <div class="flex-container">
+                    <div class="checkbox-container">
+                        <input type="checkbox" class="checkbox" name="checkbox3" id="checkbox3">
+                        <label for="checkbox3">Label</label>
+                        <span class="body-md checkbox-description">Description</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /section-checkbox -->
+
+        <section id="section-stepper">
+            <h3 class="heading-md title">Stepper</h3>
+            <div id="stepper-variants">
+                <h5 class="heading-xs subtitle">Stepper variants</h5>
+                <div class="flex-container">
+                    <div class="stepper-container">
+                        <div class="stepper completed">
+                            <div class="stepper-indicator">1</div>
+                            <span class="body-md stepper-title">completed</span>
+                        </div>
+                        <div class="stepper error">
+                            <div class="stepper-indicator">2</div>
+                            <span class="body-md stepper-title">error</span>
+                        </div>
+                        <div class="stepper on-going">
+                            <div class="stepper-indicator">3</div>
+                            <span class="body-md stepper-title">on-going</span>
+                        </div>
+                        <div class="stepper">
+                            <div class="stepper-indicator">4</div>
+                            <span class="body-md stepper-title">inactive</span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div id="stepper-group">
+                <h5 class="heading-xs subtitle">Stepper group</h5>
+                <div class="flex-container">
+                    <div class="stepper-container">
+                        <div class="stepper completed">
+                            <div class="stepper-indicator">1</div>
+                            <span class="body-md stepper-title">Step1</span>
+                        </div>
+                        <div class="stepper on-going">
+                            <div class="stepper-indicator">2</div>
+                            <span class="body-md stepper-title">Step2</span>
+                        </div>
+                        <div class="stepper">
+                            <div class="stepper-indicator">3</div>
+                            <span class="body-md stepper-title">Step3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /section-stepper -->
+
+        <section id="section-alert">
+            <h3 class="heading-md title">Alert</h3>
+            <div id="alert-variants">
+                <h5 class="heading-xs subtitle">Alert varints</h5>
+                <div class="flex-container">
+                    <div class="alert alert-primary">
+                        <i class="icon icon-info"></i>
+                        <span class="body-md">alert-primary</span>
+                    </div>
+                    <div class="alert alert-prize">
+                        <i class="icon icon-gift"></i>
+                        <span class="body-md">alert-prize</span>
+                    </div>
+                    <div class="alert alert-neutral">
+                        <i class="icon icon-loud-speaker"></i>
+                        <span class="body-md">alert-neutral</span>
+                    </div>
+                    <div class="alert alert-danger">
+                        <i class="icon icon-alert-circle"></i>
+                        <span class="body-md">alert-danger</span>
+                    </div>
+                    <div class="alert alert-warning">
+                        <i class="icon icon-alert-circle"></i>
+                        <span class="body-md">alert-warning</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="alert-with-close">
+                <h5 class="heading-xs subtitle">Alert with close icon</h5>
+                <div class="flex-container">
+                    <div class="alert alert-primary">
+                        <span class="body-md">alert-primary</span>
+                        <i class="icon icon-cross"></i>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <!-- /section-alert -->
+
+        <section id="section-spinner">
+            <h3 class="heading-md title">Spinner</h3>
+            <div id="spinner-size">
+                <h5 class="heading-xs subtitle">Spinner sizes</h5>
+                <div class="flex-container dark-bg">
+                    <div class="spinner spinner-xxl"></div>
+                    <div class="spinner spinner-xl"></div>
+                    <div class="spinner spinner-lg"></div>
+                    <div class="spinner spinner-md"></div>
+                    <div class="spinner spinner-sm"></div>
+                    <div class="spinner spinner-xs"></div>
+                </div>
+            </div>
+        </section>
+        <!-- /section-spinner -->
+
+        <section id="section-hint">
+            <h3 class="heading-md title">Hint</h3>
+            <div id="hint-with-text">
+                <h5 class="heading-xs subtitle">Hint with text</h5>
+                <div class="flex-container">
+                    <div class="hint">
+                        <div class="hint-container">
+                            <i class="icon icon-check"></i>
+                            <p class="body-lg hint-text">Text</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="hint-loading">
+                <h5 class="heading-xs subtitle">Loading hint</h5>
+                <div class="flex-container">
+                    <div class="hint hint-spinner">
+                        <div class="hint-container">
+                            <div class="spinner spinner-xxl"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /section-hint -->
+
+    </div>
+    <!-- /container -->
+</body>
+</html>

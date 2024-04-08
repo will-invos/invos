@@ -1,0 +1,113 @@
+@import 'variables';
+
+@mixin heading-base {
+    font-weight: $font-weight-semibold;
+    letter-spacing: $letter-spacing-wide;
+    color: $color-content-bold;
+}
+@mixin body-base {
+    font-weight: $font-weight-regular;
+    letter-spacing: $letter-spacing-wide;
+}
+@mixin label-base {
+    font-weight: $font-weight-medium;
+    letter-spacing: $letter-spacing-wide;
+}
+
+
+// Typography style
+body, html {
+    font-family: $font-family-default;
+    font-size: 16px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    @include body-base;
+}
+
+.display {
+    font-size: 2.75rem;
+    line-height: 3.5rem;
+    font-weight: $font-weight-semibold;
+    letter-spacing: $letter-spacing-normal;
+    margin-bottom: $space-400;
+}
+
+.heading-xl, h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: $space-400;
+    @include heading-base;
+}
+.heading-lg, h2 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    margin-bottom: $space-400;
+    @include heading-base;
+}
+.heading-md, h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: $space-400;
+    @include heading-base;
+}
+.heading-sm, h4 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin-bottom: $space-200;
+    @include heading-base;
+}
+.heading-xs, h5 {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    margin-bottom: $space-200;
+    @include heading-base;
+}
+
+code {
+    font-family: $font-family-code;
+}
+
+.code {
+    &-lg, &-md, &-sm {
+        font-family: $font-family-code;
+    }
+}
+
+.body, .code {
+    &-lg {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    &-md {
+        font-size: .875rem;
+        line-height: 1.375rem;
+    }
+    &-sm {
+        font-size: .75rem;
+        line-height: 1.125rem;  
+    }
+    &-lg, &-md, &-sm {
+        @include body-base;
+    }
+}
+
+.label {
+    &-lg {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    &-md {
+        font-size: .875rem;
+        line-height: 1.375rem;
+    }
+    &-sm {
+        font-size: .75rem;
+        line-height: 1.125rem;
+    }
+    &-lg, &-md, &-sm {
+        @include label-base;
+    }
+}

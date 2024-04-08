@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../ui-kit/css/reset.css">
+    <link rel="stylesheet" href="../ui-kit/css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>海尼根150週年 - 存星銀啤酒發票張張領回饋 限量聯名桌遊帶回家</title>
+    <script src="../ui-kit/js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {         
+            //點擊滑動至錨點
+            $('.anchor').on('click', function(e){
+                e.preventDefault();
+                var href = $(this).attr('href');
+                $('html, body').animate({
+                    scrollTop: $(href).offset().top - 48
+                }, 500);
+            });
+
+            //偵測捲軸位置顯示置頂分頁列
+            $(window).scroll(function(){
+                var scrTop = $(this).scrollTop();
+                var topHeight = $('#section-top').height() - 48;
+                if (scrTop >= topHeight) {
+                    $('#top-nav, .btn-fab').removeClass('hide');
+                } else {
+                    $('#top-nav, .btn-fab').addClass('hide');
+                }
+            });
+
+            //偵測捲軸位置改變對應的 tab 樣式
+            $(window).scroll(function(){
+                var scrTop = $(this).scrollTop();
+                $('.container > section').each(function () {
+                    var secTop = $(this).offset().top - 48;
+                    if (secTop <= scrTop && secTop + $(this).height() > scrTop){
+                        var index = $(this).index() - 1;
+                        $('.tablist .tab').removeClass('selected').eq(index).addClass('selected');
+                    }
+                });
+            });
+
+            //展開更多獎項
+            $('.btn-more-prize').on('click', function(e){
+                $('#section-prize').addClass('expand');
+            });
+            
+        });
+        
+    </script>
+</head>
+<body>
+    <!-- 有主題樣式時在 body class 套用 has-theme -->
+    <div class="tablist hide" id="top-nav">
+        <a href="#section-prize" role="tab" class="anchor tab selected">活動獎項</a>
+        <a href="#section-instruction" role="tab" class="anchor tab">活動說明</a>
+        <a href="#section-tutorial" role="tab" class="anchor tab">操作教學</a>
+        <a href="#section-caution" role="tab" class="anchor tab">注意事項</a>
+    </div>
+    <!-- /tablist -->
+
+    <div class="container has-sheet">
+        <div id="section-top">
+            <header class="header">
+                <div class="logo">
+                    <img src="images/logo-invos.svg" alt="">
+                </div>
+            </header>
+            <!-- /header -->
+    
+            <img src="images/banner.png" alt="" class="top-banner">
+            
+            <div class="top-heading" id="top-heading">
+                <h4 class="heading-sm">海尼根150週年</h4>
+                <h1 class="heading-lg">存星銀啤酒發票張張領回饋<br>限量聯名桌遊帶回家</h1>
+                <p class="label-lg date">2023/10/1 ~ 2023/12/31</p>
+            </div>
+            <!-- /top-heading -->
+        </div>
+        <!-- /section-top -->
+
+        <section class="section" id="section-prize">
+            <h3 class="heading-md title">活動獎項</h3>
+
+            <div class="prize-grid">
+                <div class="prize-item">
+                    <div class="prize-img show-badge" data-badge="抽">
+                        <!-- <img src="https://fakeimg.pl/120x120" alt=""> -->
+                    </div>
+                    <p class="label-lg prize-name">Prize</p>
+                </div>
+                <div class="prize-item">
+                    <div class="prize-img show-badge badge-sm" data-badge="頭獎">
+                        <img src="https://fakeimg.pl/120x120" alt="">
+                    </div>
+                    <p class="label-lg prize-name">Prize</p>
+                </div>
+                <div class="prize-item">
+                    <div class="prize-img">
+                        <img src="https://fakeimg.pl/120x120" alt="">
+                    </div>
+                    <p class="label-lg prize-name">Prize</p>
+                </div>
+                <div class="prize-item">
+                    <div class="prize-img">
+                        <img src="https://fakeimg.pl/120x120" alt="">
+                    </div>
+                    <p class="label-lg prize-name">Prize</p>
+                </div>
+                <div class="prize-item">
+                    <div class="prize-img">
+                        <img src="https://fakeimg.pl/120x120" alt="">
+                    </div>
+                    <p class="label-lg prize-name">Prize</p>
+                </div>
+            </div>
+
+            <div class="more">
+                <a class="label-lg btn-text btn-more-prize" href="javascript:void(0)">
+                    <i class="icon icon-chevron-down"></i> 更多獎項
+                </a>
+            </div>
+        </section>
+        <!-- /section-prize -->
+
+        <section class="section" id="section-instruction">
+            <h3 class="heading-md title">活動說明</h3>
+            <div class="subsection event-winner">
+                <h5 class="heading-xs subtitle">中獎名單</h5>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>獎項</th>
+                                <th>姓名</th>
+                                <th>手機號碼</th>
+                                <th>發票號碼</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Monopoly 地產大亨<br>海尼根 150 週年紀念版</td>
+                                <td>王O明</td>
+                                <td>0912***678</td>
+                                <td>NF35XXX075</td>
+                            </tr>
+                            <tr>
+                                <td>海尼根星銀聲控燈</td>
+                                <td>王O明</td>
+                                <td>0912***678</td>
+                                <td>NF35XXX075</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="subsection event-time">
+                <h5 class="heading-xs subtitle">活動時間</h5>
+                <div class="list time-list">
+                    <div class="list-item">
+                        <div class="item-leading">
+                            <i class="icon icon-calendar"></i>
+                        </div>
+                        <div class="item-content">
+                            <p class="body-lg headline">活動時間</p>
+                            <p class="body-md description">2023/10/1(日) 00:00 ~ 2023/12/31(日) 23:59</p>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-leading">
+                            <i class="icon icon-alarm-clock"></i>
+                        </div>
+                        <div class="item-content">
+                            <p class="body-lg headline">發票登錄時間</p>
+                            <p class="body-md description">2023/10/1(日) 00:00 ~ 2024/01/03(三) 23:59</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection event-rule">
+                <h5 class="heading-xs subtitle">活動規則</h5>
+                <p class="body-lg">活動期間內於活動通路購買「海尼根星銀啤酒」達到指定金額，並將消費發票存入「發票存摺 APP」，即可參加海尼根 150 週年存星銀啤酒發票張張領回饋活動！</p>
+            </div>
+            
+            <div class="subsection event-product">
+                <h5 class="heading-xs subtitle">指定品項</h5>
+                <div class="product-category">
+                    <div class="product-list">
+                        <div class="product-item">
+                            <img src="https://fakeimg.pl/120x120" alt="">
+                            <p class="label-lg ellipsis product-name">item</p>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://fakeimg.pl/120x120" alt="">
+                            <p class="label-lg ellipsis product-name">item</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-category">
+                    <h5 class="heading-xs category-title">scrollable</h5>
+                    <div class="product-list scrollable">
+                        <div class="product-item">
+                            <img src="https://fakeimg.pl/120x120" alt="">
+                            <p class="label-lg ellipsis product-name">item</p>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://fakeimg.pl/120x120" alt="">
+                            <p class="label-lg ellipsis product-name">item</p>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://fakeimg.pl/120x120" alt="">
+                            <p class="label-lg ellipsis product-name">item</p>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://fakeimg.pl/120x120" alt="">
+                            <p class="label-lg ellipsis product-name">item</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-category">
+                    <h5 class="heading-xs category-title">full-width</h5>
+                    <div class="product-list full-width">
+                        <div class="product-item">
+                            <img src="https://picsum.photos/640/320?random=1" alt="">
+                            <p class="label-lg ellipsis product-name">item</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection event-channel">
+                <h5 class="heading-xs subtitle">指定通路</h5>
+                <p class="body-lg">活動通路包含全聯、美廉社、家樂福、大潤發、小北百貨、愛買、好市多…等有開立「電子發票」之店家，活動通路不含四大超商，在四大超商購買無法獲得參加資格）。</p>
+            </div>
+
+            <div class="subsection event-prize">
+                <h5 class="heading-xs subtitle">活動獎項</h5>
+                <div class="list prize-list">
+                    <div class="list-item">
+                        <div class="item-leading">
+                            <img src="https://fakeimg.pl/80x80" alt="" >
+                        </div>
+                        <div class="item-content">
+                            <p class="body-lg headline">Monopoly 地產大亨歡慶海尼根 150 週年紀念版</p>
+                            <p class="body-md description">限 10 名，消費金額達 199 元即可領獎</p>
+                        </div>
+                    </div>
+    
+                    <div class="list-item">
+                        <div class="item-leading">
+                            <img src="https://fakeimg.pl/80x80" alt="" >
+                        </div>
+                        <div class="item-content">
+                            <p class="body-lg headline">海尼根星銀聲控燈</p>
+                            <p class="body-md description">限 300 名，不限消費金額皆可參加抽獎</p>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <div class="item-leading">
+                            <img src="https://fakeimg.pl/80x80" alt="" >
+                        </div>
+                        <div class="item-content">
+                            <p class="body-lg headline">海尼根 150 週年紀念杯</p>
+                            <p class="body-md description">限 200 名，不限消費金額皆可參加抽獎</p>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <div class="item-leading">
+                            <img src="https://fakeimg.pl/80x80" alt="" >
+                        </div>
+                        <div class="item-content">
+                            <p class="body-lg headline">2000 元量販購物金</p>
+                            <p class="body-md description">限 10 名，小北百貨通路限定，消費金額達777 元即可參加抽獎</p>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <div class="item-leading">
+                            <img src="https://fakeimg.pl/80x80" alt="" >
+                        </div>
+                        <div class="item-content">
+                            <p class="body-lg headline">1000 元超商購物金</p>
+                            <p class="body-md description">限 20 名，消費金額達 777 元即可參加抽獎</p>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <div class="item-leading">
+                            <img src="https://fakeimg.pl/80x80" alt="" >
+                        </div>
+                        <div class="item-content">
+                            <p class="body-lg headline">50 元超商購物金</p>
+                            <p class="body-md description">人人有獎，消費金額達 199 元即可領獎</p>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <div class="item-leading">
+                            <img src="https://fakeimg.pl/80x80" alt="" >
+                        </div>
+                        <div class="item-content">
+                            <p class="body-lg headline">發票存摺 2000 金幣</p>
+                            <p class="body-md description">人人有獎，消費金額達 199 元即可領獎</p>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+
+            <div class="subsection event-annocement">
+                <h5 class="heading-xs subtitle">中獎公告與領獎注意事項</h5>
+                <ul>
+                    <li>中獎名單將於 2024/2/20（二） 23:59 前公布於發票存摺 APP 中獎名單區，並於公布當天透過發票存摺客服信箱寄 E-mail 至中獎者所留存之發票存摺會員信箱，與之確認收件資訊，請主動且密切留意中獎公告與 E-mail 通知。</li>
+                    <li>請中獎者於 2024/2/27（二）23:59 前回覆中獎通知信件，收到回覆後主辦單位將於 2024/3/5（二）23:59 前寄出獎品至指定收件地址。中獎者逾期回覆視同放棄中獎資格，亦不得要求發票存摺重新提供獎品。</li>
+                </ul>
+            </div>
+
+            <div class="subsection event-invoice-definition">
+                <h5 class="heading-xs subtitle">有效發票定義</h5>
+                <ul>
+                    <li>須為活動期間內（2023/10/1（日）00:00 起 ~ 2023/12/31（日）23:59 止）於指定通路購買「海尼根星銀啤酒」產品所開立之發票，日期判斷以發票上所示日期為準。</li>
+                    <li>消費者所有資料僅作為贈獎用。若資料填寫有誤、不完整、無法辨識或虛構，導致無法收件或其他相關問題，則視同放棄。</li>
+                    <li>發票上須有可辨識購買品項含指定活動商品之明細，若發現內容不實，視同無效，主辦單位有權取消其中獎資格。</li>
+                    <li>本活動所登錄之發票係指儲存於「發票存摺」之電子實體發票、雲端發票，傳統發票發行之通路不適用於本活動。</li>
+                </ul>
+            </div>
+        </section>
+        <!-- /section-instruction -->
+
+        <section class="section" id="section-tutorial">
+            <h3 class="heading-md title">操作教學</h3>
+            <h5 class="heading-xs subtitle">發票存摺 APP 操作教學</h5>
+            <div class="qa-list">
+                <div class="label-lg quesiton">如何將「海尼根星銀啤酒」發票存進發票存摺 APP 中？</div>
+                <div class="answer">
+                    <ul>
+                        <li>消費時，使用發票存摺 APP 綁定的財政部手機條碼讓店家刷取，等待 3~5 天，發票即會自動存入。</li>
+                        <li>開啟對獎器鏡頭，掃描紙本電子發票＋輸入隨機碼即可存入（傳統長條發票不算歐）。</li>
+                    </ul>
+                </div>
+                <div class="label-lg quesiton">已有購買海尼根星銀啤酒，但發票還沒出現在發票存摺 APP 裡？</div>
+                <div class="answer">
+                    <ul>
+                        <li>發票存入需等待 3~5 天，只要發票開立時間符合 10/1 ~ 11/30 活動期間，即算符合資格。</li>
+                        <li>您可以在消費結帳後的 3~5 天，再次刷新發票存摺 APP 中的「發票存摺頁」，確認您的發票狀態；也可以前往 APP 中【海尼根星銀啤酒】發票狀態確認專區，讓發票存摺小金靈為您查詢您的發票狀態。</li>
+                    </ul>
+                </div>
+                <div class="label-lg quesiton">如何獲得金幣與抽獎機會？</div>
+                <div class="answer">
+                    <ul>
+                        <li>當系統確認您的「海尼根星銀啤酒」發票符合活動資格，系統即會自動發送金幣與抽獎券給您。</li>
+                        <li>請前往發票存摺 APP「集點兌禮」點選「領取獎勵」，即可獲得金幣與抽獎機會。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- /section-tutorial -->
+
+        <section class="section" id="section-caution">
+            <h3 class="heading-md title">注意事項</h3>
+            <ul>
+                <li>參加者於參與本活動之同時，即表示同意接受本活動之活動辦法與注意事項之規範；如有違反，主辦單位得取消其中獎資格，並對於任何破壞本活動之行為保留法律追訴權。</li>
+                <li>參加者保證所有填寫或提出之資料均為真實、正確，如因中獎者之資料不實或填寫不正確或不完整或無法辨識等問題導致無法兌獎者，視同中獎者自願放棄中獎資格，獎項將不另行補發，主辦單位不負任何責任；若因逾期兌獎者，視同自行放棄並不得異議。且如有致損害於主辦單位或其他任何第三人，參加者應負一切相關責任。</li>
+                <li>主辦單位有權檢視各活動參加者之參與行為及中獎情形是否涉嫌不法或有違常理之異常狀況，例：人為操作蓄意偽造、短時間異常多筆參與行為、透過任何電腦程式參與活動、詐欺或以任何其他不正當的方式意圖以進行不實或虛偽活動參與行為、或登錄資料不實或不正確或盜用任何第三人之資料，或有違反活動規範之行為等。活動參加者因上述情形所獲得之活動資格及獎品，主辦單位及活動小組保有變更、終止參加活動資格、取消中獎資格或暫停活動的權利，並保留法律追訴權。</li>
+                <li>本活動之所有獎品不得轉換、轉讓或折換現金。獎項以公佈於本頁面上的資料為準，如遇不可抗力之因素，主辦單位保留更換其他等值獎項之權利。</li>
+                <li>獎項以公佈於本活動辦法網頁上的資料為準，主辦單位保留修改活動獎項細節的權利，無須事前通知，並有權對本活動所有事宜作出解釋或裁決。</li>
+                <li>中獎者須遵守各獎品供應商所列有關獎品之各項條款及細則，如有相關使用疑問，請洽各獎品供應商，主辦單位對所有領取或使用獎品等事宜，概不負責。</li>
+                <li>如有任何因網路、電子產品（包括但不限於任何其他得登入本活動參與抽獎之電子產品。例如：電腦、IPAD、手機）、技術或不可歸責於主辦單位之事由，而使參加者所登錄之資料有延遲、遺失、錯誤、無法辨識或毀損之情況，主辦單位不負任何法律責任，參加者亦不得因此異議。</li>
+                <li>本活動限中華民國台灣地區（台澎金馬）之居民參加，獎品寄送亦限於中華民國台灣地區（台澎金馬）。贈品一經寄送，主辦單位不負贈品無法送達及寄送時發生損毀之責任。</li>
+                <li>主辦單位保留取消、變更或解釋活動內容之權利。如有任何爭議，主辦單位保留最終裁決權。</li>
+            </ul>
+        </section>
+        <!-- /section-caution --> 
+    </div>
+    <!-- /container -->
+
+    <div class="section-bottom" id="section-bottom">
+        <a href="#section-top" role="button" class="btn-icon btn-fab btn-neutral btn-lg anchor hide" id="back-to-top">
+            <i class="icon icon-arrow-up"></i>
+        </a>
+        <div class="sheet">
+            <a href="./application.html" role="button" class="btn btn-primary btn-lg btn-block">
+                <span>我要參加</span>
+            </a>
+        </div>
+    </div>
+    <!-- /section-bottom -->
+</body>
+</html>

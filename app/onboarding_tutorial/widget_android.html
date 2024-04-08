@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>桌面小工具 - Android</title>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <h4>什麼是桌面小工具？</h4>
+            <img src="images/img_widget_android.png" alt="" class="full-width">
+            <p>桌面小工具是一種可以放置在手機桌面或智慧手錶上的便利程式，讓您在結帳時可以快速出示發票載具或會員卡條碼，無需再點開 APP。 APP。</p>
+        </div>
+
+        <div class="section">
+            <h4>使用小工具的好處</h4>
+            <div class="pros">
+                <div class="pros-item">
+                    <img src="img_widget_pros1.png" alt="">
+                    <p class="pros-title">快速出示</p>
+                    <p class="body-sm">結帳時無需再開 APP</p>
+                </div>
+                <div class="pros-item">
+                    <img src="img_widget_pros2.png" alt="">
+                    <p class="pros-title">方便操作</p>
+                    <p class="body-sm">會員卡與條碼一起掃</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h4>怎麼設定 Android 手機的小工具？</h4>
+            <video class="demo" src="https://cdn.invos.com.tw/videos/android_normal_light_mode.mp4" autoplay loop muted preload="auto"></video>
+            <ul>
+                <li>在桌面上長按任意空白處。</li>
+                <li>點選左上角的「+」圖示。</li>
+                <li>找到「發票存摺」App。</li>
+                <li>選擇要加入的小工具尺寸。</li>
+                <li>將小工具拖曳到桌面上即可。</li>
+            </ul>
+            <div class="divider"></div>
+            <h4>怎麼設定 Smart Watch 的小工具？</h4>
+            <button type="button" class="btn btn-neutral btn-md" id="btn-watch" onclick="showAlert()">
+                <i class="icon icon-info"></i>
+                <span>瞭解更多</span>
+            </button>
+            <script>
+                function showAlert() {
+                  alert("尚未支援 Android 智慧手錶的小工具，我們正在努力開發中，請耐心等候！");
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

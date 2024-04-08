@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../ui-kit/css/reset.css">
+    <link rel="stylesheet" href="../ui-kit/css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>參加流程</title>
+    <script src="../ui-kit/js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //開啟 modal
+            $('.open-modal').on('click', function(){
+                $('.modal').addClass('bounceIn').delay(300).removeClass('hide');
+                //套用 iframe 網址及標題
+                var title = $(this).text();
+                var link = $(this).attr('data-link');
+                $('.modal-iframe iframe').attr('src', link);
+                $('.modal-iframe .nav-title').text(title);
+            });
+
+            //關閉 modal
+            $('.modal .btn-close, .modal-overlay').on('click', function(){
+                $(this).parents('.modal').addClass('hide');
+            });
+
+            //切換 step
+            $('.sheet .btn-submit').on('click', function(){
+                $(this).parents('.container').addClass('hide');
+                var nextStep = $(this).attr('data-next');
+                $('#' + nextStep).removeClass('hide');
+            });
+
+            //跳轉下一個驗證碼 input
+            $('.pin-input-container .pin-input').keyup(function() {
+                var maxLength = parseInt($(this).attr('maxlength'));
+                var currentLength = $(this).val().length;
+                
+                if (currentLength >= maxLength) {
+                    $(this).next('.pin-input').focus();
+                }
+            });
+            
+        });
+    </script>
+</head>
+<body>
+    <div class="container has-sheet bg-sunken" id="step1">
+        <section class="section-progress">
+            <div class="stepper-container">
+                <div class="stepper on-going">
+                    <div class="stepper-indicator">1</div>
+                    <span class="body-md stepper-title">綁定載具</span>
+                </div>
+                <div class="stepper">
+                    <div class="stepper-indicator">2</div>
+                    <span class="body-md stepper-title">註冊/登入</span>
+                </div>
+                <div class="stepper">
+                    <div class="stepper-indicator">3</div>
+                    <span class="label-md stepper-title">驗證身份</span>
+                </div>
+                <div class="stepper">
+                    <div class="stepper-indicator">4</div>
+                    <span class="body-md stepper-title">完成</span>
+                </div>
+            </div>
+        </section>
+        <!-- /section-progress -->
+        
+        <div class="content">
+            <section class="section-form">
+                <div class="mgy-400">
+                    <h1 class="heading-lg mgb-200">1. 綁定載具</h1>
+                    <p>我們會為您自動同步活動發票</p>
+                </div>
+                <div class="mgb-400">
+                    <div class="alert alert-danger">
+                        <i class="icon icon-alert-circle"></i>
+                        <span class="body-md">載具條碼或驗證碼有誤，請重新輸入</span>
+                    </div>
+                </div>
+                <div class="mgy-400">
+                    <form action="" class="form" id="form-carrier">
+                        <div class="input-container mgb-400">
+                            <input type="text" class="input" id="carrier" placeholder="" maxlength="8" required>
+                            <label for="carrier" class="input-label">載具條碼</label>
+                        </div>
+                        <div class="input-container has-right-icon">
+                            <input type="password" class="input" id="carrier-pwd" placeholder="" required>
+                            <label for="carrier-pwd" class="input-label">載具認證碼 (密碼)</label>
+                            <i class="icon icon-eye-off"></i>
+                        </div>
+                    </form>
+                    <div class="mgt-400 align-right">
+                        <button type="button" class="btn btn-text btn-md open-modal" id="forget-pwd" data-link="https://invoice.tw/news/?p=1640">忘記認證碼</button>
+                    </div>
+                </div>
+            </section>
+            <!-- /section-form -->
+
+            <section class="section-faq">
+                <h3 class="heading-xs subtitle">常見問題</h3>
+                <ol class="faq">
+                    <li>
+                        <a href="javascript:void(0)" data-link="https://invoice.tw/news/?p=182" class="open-modal">什麼是載具條碼？</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-link="https://invoice.tw/news/?p=1640" class="open-modal">什麼是載具驗證碼？</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-link="https://invoice.tw/news/?p=8513" class="open-modal">如何查詢手機條碼？</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-link="https://invoice.tw/news/?p=5495" class="open-modal">沒有載具條碼要怎麼參加？</a>
+                    </li>
+                </ol>
+            </section>
+            <!-- /section-faq -->
+        </div>
+
+        <div class="section-bottom">
+            <div class="sheet">
+                <button type="button" class="btn btn-primary btn-lg btn-block btn-submit" data-next="step2">
+                    <span>進行綁定</span>
+                </button>
+            </div>
+        </div>
+        <!-- /section-bottom -->
+        
+    </div>
+    <!-- /container#step1 -->
+
+    <div class="container has-sheet bg-sunken hide" id="step2">
+        <section class="section-progress">
+            <div class="stepper-container">
+                <div class="stepper completed">
+                    <div class="stepper-indicator">1</div>
+                    <span class="body-md stepper-title">綁定載具</span>
+                </div>
+                <div class="stepper on-going">
+                    <div class="stepper-indicator">2</div>
+                    <span class="body-md stepper-title">註冊/登入</span>
+                </div>
+                <div class="stepper">
+                    <div class="stepper-indicator">3</div>
+                    <span class="label-md stepper-title">驗證身份</span>
+                </div>
+                <div class="stepper">
+                    <div class="stepper-indicator">4</div>
+                    <span class="body-md stepper-title">完成</span>
+                </div>
+            </div>
+        </section>
+        <!-- /section-progress -->
+
+        <div class="content">
+            <section class="section-form">
+                <div class="mgy-400">
+                    <h1 class="heading-lg mgb-200">2. 註冊/登入發票存摺</h1>
+                    <p>請填寫正確的聯絡資訊，中獎時我們將會通知您</p>
+                </div>
+                <div class="mgy-400">
+                    <form action="" class="form" id="form-login">
+                        <div class="input-container mgb-400">
+                            <input type="tel" class="input" id="phone" placeholder="" maxlength="10" required>
+                            <label for="phone" class="input-label">手機號碼</label>
+                        </div>
+                        <div class="input-container mgb-400">
+                            <input type="email" class="input" id="email" placeholder="" required>
+                            <label for="email" class="input-label">電子信箱</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" class="checkbox" name="term1" id="term1">
+                            <label for="term1">我同意個人資料使用</label>
+                            <span class="body-md checkbox-description">本人清楚瞭解個人資料保護法目的外利用同意書，並依據個資法第7條第2項及第20條第1項第6款規定，同意海尼根得於特定目的外之其他利用目的利用本人所主動提供之個人資料。</span>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" class="checkbox" name="term2" id="term2">
+                            <label for="term2">我同意發票存摺的<a href="javascript:void(0)" data-link="https://invos.com.tw/privacy-term" class="open-modal">使用者條款與隱私權政策</a></label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" class="checkbox" name="term3" id="term3">
+                            <label for="term3">我願意收到海尼根的行銷與廣告宣傳資訊</label>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <!-- /section-form -->
+
+            <div class="section-bottom">
+                <div class="sheet">
+                    <button type="button" class="btn btn-primary btn-lg btn-block btn-submit" data-next="step3">
+                        <span>註冊/登入</span>
+                    </button>
+                </div>
+            </div>
+            <!-- /section-bottom -->
+        </div>
+    </div>
+    <!-- /container#step2 -->
+
+    <div class="container has-sheet bg-sunken hide" id="step3">
+        <section class="section-progress">
+            <div class="stepper-container align-right">
+                <div class="stepper completed">
+                    <div class="stepper-indicator">1</div>
+                    <span class="body-md stepper-title">綁定載具</span>
+                </div>
+                <div class="stepper completed">
+                    <div class="stepper-indicator">2</div>
+                    <span class="body-md stepper-title">註冊/登入</span>
+                </div>
+                <div class="stepper on-going">
+                    <div class="stepper-indicator">3</div>
+                    <span class="label-md stepper-title">驗證身份</span>
+                </div>
+                <div class="stepper">
+                    <div class="stepper-indicator">4</div>
+                    <span class="body-md stepper-title">完成</span>
+                </div>
+            </div>
+        </section>
+        <!-- /section-progress -->
+
+        <div class="content">
+            <section class="section-form">
+                <div class="mgy-400">
+                    <h1 class="heading-lg mgb-200">3. 驗證身份</h1>
+                    <p>請輸入發送至手機 <span id="user-phone">0912345678</span> 的簡訊驗證碼</p>
+                </div>
+                <div class="mgy-400">
+                    <form action="" class="form" id="form-verification">
+                        <div class="pin-input-container">
+                            <input inputmode="numeric" type="tel" class="pin-input" maxlength="1" autocomplete="off">
+                            <input inputmode="numeric" type="tel" class="pin-input" maxlength="1" autocomplete="off">
+                            <input inputmode="numeric" type="tel" class="pin-input" maxlength="1" autocomplete="off">
+                            <input inputmode="numeric" type="tel" class="pin-input" maxlength="1" autocomplete="off">
+                            <input inputmode="numeric" type="tel" class="pin-input" maxlength="1" autocomplete="off">
+                            <input inputmode="numeric" type="tel" class="pin-input" maxlength="1" autocomplete="off">
+                        </div>
+                    </form>
+                </div>
+                <p>沒有收到驗證碼嗎？<span id="resend-sms"><span id="countdown">60</span> 秒後可重新發送</span><a href="javascript:void(0)" class="hide">重新發送</a></p>
+            </section>
+            <!-- /section-form -->
+            <section class="section-faq">
+                <h3 class="heading-xs subtitle">常見問題</h3>
+                <ol class="faq">
+                    <li>
+                        <a href="javascript:void(0)" data-link="" class="open-modal">為什麼我收不到驗證碼？</a>
+                    </li>
+                </ol>
+            </section>
+            <!-- /section-faq -->
+
+            <div class="section-bottom">
+                <div class="sheet">
+                    <button type="button" class="btn btn-primary btn-lg btn-block btn-submit" data-next="step4">
+                        <span>驗證</span>
+                    </button>
+                </div>
+            </div>
+            <!-- /section-bottom -->
+        </div>
+    </div>
+    <!-- /container#step3 -->
+
+    <div class="container bg-sunken hide" id="step4">
+        <section class="section-progress">
+            <div class="stepper-container align-right">
+                <div class="stepper completed">
+                    <div class="stepper-indicator">1</div>
+                    <span class="body-md stepper-title">綁定載具</span>
+                </div>
+                <div class="stepper completed">
+                    <div class="stepper-indicator">2</div>
+                    <span class="body-md stepper-title">註冊/登入</span>
+                </div>
+                <div class="stepper completed">
+                    <div class="stepper-indicator">3</div>
+                    <span class="label-md stepper-title">驗證身份</span>
+                </div>
+                <div class="stepper on-going">
+                    <div class="stepper-indicator">4</div>
+                    <span class="body-md stepper-title">完成</span>
+                </div>
+            </div>
+        </section>
+        <!-- /section-progress -->
+
+        <div class="content">
+            <section class="section">
+                <div class="mgy-400">
+                    <h1 class="heading-lg mgb-200">成功參加活動</h1>
+                    <p>快去收集活動發票吧！</p>
+                    <a href="index.html" role="button" class="btn btn-neutral mgt-400">
+                        <span>返回活動頁</span>
+                    </a>
+                </div>
+            </section>    
+            <!-- /section -->
+        </div>
+
+        <div class="section-bottom">
+            <div class="sheet app-sheet">
+                <img src="images/app-icon-invos.png" alt="" class="app-icon">
+                <div class="app-info">
+                    <p class="label-lg">立即下載「發票存摺」</p>
+                    <div class="app-download">
+                        <a href="#" class="btn-download btn-ios">
+                            <img src="images/btn-app-store.png" alt="">
+                        </a>
+                        <a href="#" class="btn-download btn-android">
+                            <img src="images/btn-google-play.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /section-bottom -->
+    </div>
+    <!-- /container#step4 -->
+
+
+
+    <div class="modal modal-iframe hide" id="modal-iframe">
+        <div class="modal-container">
+            <div class="nav-bar">
+                <div class="nav-left">
+                    <div class="btn-icon btn-close">
+                        <i class="icon icon-cross"></i>
+                    </div>
+                </div>
+                <span class="label-lg nav-title"></span>
+            </div>
+            <iframe src="" frameborder="0"></iframe>
+        </div>
+        <div class="modal-overlay"></div>
+    </div>
+    <!-- /modal-container -->
+</body>
+</html>
