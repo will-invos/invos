@@ -63,6 +63,9 @@ p {
         text-align: center;
         border: 1px solid $color-border-subtle;
         border-radius: .5rem;
+        > img {
+            max-width: 80px;
+        }
     }
     &-title {
         margin-bottom: .25rem;
