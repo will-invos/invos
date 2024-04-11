@@ -609,6 +609,114 @@
     --color-shadow-sheet: var(--gray-a90);
   }
 }
+body, html {
+  font-family: Noto Sans TC, PingFangTC, Microsoft JhengHei, sans-serif;
+  font-size: 16px;
+  color: var(--color-content-default);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.display {
+  font-size: 2.75rem;
+  line-height: 3.5rem;
+  font-weight: 600;
+  letter-spacing: normal;
+  margin-bottom: 16px;
+}
+
+.heading-xl, h1 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--color-content-bold);
+}
+
+.heading-lg, h2 {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--color-content-bold);
+}
+
+.heading-md, h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--color-content-bold);
+}
+
+.heading-sm, h4 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--color-content-bold);
+}
+
+.heading-xs, h5 {
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--color-content-bold);
+}
+
+code {
+  font-family: Roboto Mono, SF Mono, Consolas;
+}
+
+.code-lg, .code-md, .code-sm {
+  font-family: Roboto Mono, SF Mono, Consolas;
+}
+
+.body-lg, .code-lg {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.body-md, .code-md {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+.body-sm, .code-sm {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+.body-lg, .body-md, .body-sm, .code-lg, .code-md, .code-sm {
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.label-lg {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.label-md {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+.label-sm {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+.label-lg, .label-md, .label-sm {
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
 @font-face {
   font-family: "icon-invos";
   src: url("fonts/icon-invos.ttf?3h8epm") format("truetype"), url("fonts/icon-invos.woff?3h8epm") format("woff"), url("fonts/icon-invos.svg?3h8epm#icon-invos") format("svg");
@@ -2651,112 +2759,4 @@ input::placeholder {
 .alert-prize {
   color: var(--color-content-prize-bold);
   background-color: var(--color-background-prize-subtlest);
-}
-
-body, html {
-  font-family: Noto Sans TC, PingFangTC, Microsoft JhengHei, sans-serif;
-  font-size: 16px;
-  color: var(--color-content-default);
-}
-
-p {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 400;
-  letter-spacing: 1px;
-}
-
-.display {
-  font-size: 2.75rem;
-  line-height: 3.5rem;
-  font-weight: 600;
-  letter-spacing: normal;
-  margin-bottom: 16px;
-}
-
-.heading-xl, h1 {
-  font-size: 2rem;
-  line-height: 2.5rem;
-  margin-bottom: 16px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: var(--color-content-bold);
-}
-
-.heading-lg, h2 {
-  font-size: 1.75rem;
-  line-height: 2.25rem;
-  margin-bottom: 16px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: var(--color-content-bold);
-}
-
-.heading-md, h3 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  margin-bottom: 16px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: var(--color-content-bold);
-}
-
-.heading-sm, h4 {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  margin-bottom: 8px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: var(--color-content-bold);
-}
-
-.heading-xs, h5 {
-  font-size: 1.125rem;
-  line-height: 1.625rem;
-  margin-bottom: 8px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: var(--color-content-bold);
-}
-
-code {
-  font-family: Roboto Mono, SF Mono, Consolas;
-}
-
-.code-lg, .code-md, .code-sm {
-  font-family: Roboto Mono, SF Mono, Consolas;
-}
-
-.body-lg, .code-lg {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-.body-md, .code-md {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-}
-.body-sm, .code-sm {
-  font-size: 0.75rem;
-  line-height: 1.125rem;
-}
-.body-lg, .body-md, .body-sm, .code-lg, .code-md, .code-sm {
-  font-weight: 400;
-  letter-spacing: 1px;
-}
-
-.label-lg {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-.label-md {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-}
-.label-sm {
-  font-size: 0.75rem;
-  line-height: 1.125rem;
-}
-.label-lg, .label-md, .label-sm {
-  font-weight: 500;
-  letter-spacing: 1px;
 }/*# sourceMappingURL=base.css.map */
