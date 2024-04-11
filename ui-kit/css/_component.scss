@@ -70,6 +70,8 @@
     }
 }
 
+$color-border-subtle: var(--color-border-subtle);
+
 //Divider
 .divider {
     width: 100%;
@@ -80,20 +82,20 @@
 
 //Background
 .bg-default {
-    background-color: $color-background-default;
+    background-color: var(--color-background-default);
 }
 .bg-sunken {
-    background-color: $color-background-default;
+    background-color: var(--color-background-default);
 }
 
 //Link
 a {
-    color: $color-content-brand-default;
+    color: var(--color-content-brand-default);
     &:hover {
         text-decoration: underline;
     }
     &:active {
-        color: $color-content-brand-active;
+        color: var(--color-content-brand-active);
     }
 }
 
@@ -111,7 +113,7 @@ a {
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    border-bottom: $divider;
+    border-bottom: 1px solid var(--color-border-divider);
     background-color: white;
     .tab {
         height: 3rem;
@@ -121,12 +123,12 @@ a {
         align-items: center;
         justify-content: center;
         font-size: .875rem;
-        color: $color-content-subtle;
+        color: var(--color-content-subtle);
         border-bottom: 3px solid transparent;
         &.selected {
-            color: $color-content-bold;
+            color: var(--color-content-bold);
             font-weight: 700;
-            border-bottom-color: $color-content-bold;
+            border-bottom-color: var(--color-content-bold);
         }
     }
     &.scrollable {
@@ -166,7 +168,7 @@ ul {
     flex-direction: row;
     align-items: flex-start;
     gap: $space-400;
-    border-bottom: $divider;
+    border-bottom: 1px solid var(--color-border-divider);
     &:last-child {
         border-bottom: none;
     }
@@ -185,7 +187,7 @@ ul {
             }
             .description {
                 margin: $space-50 0 0;
-                color: $color-content-subtle;
+                color: var(--color-content-subtle);
             }
         }
         &-trailing {
@@ -198,8 +200,8 @@ ul {
 .sheet {
     padding: $space-400;
     width: 100%;
-    background: $color-background-default;
-    border-top: $divider;
+    background: var(--color-background-default);
+    border-top: 1px solid var(--color-border-divider);
 }
 
 //Buttons
@@ -227,7 +229,7 @@ ul {
             content: '';
             position: absolute;
             border-style: solid;
-            border-color: $color-border-inverse-plain;
+            border-color: var(--color-border-inverse-plain);
             border-width: 2px;
             border-bottom-color: transparent;
             border-radius: $radius-full;
@@ -245,6 +247,7 @@ ul {
     
     &.disabled, &:disabled {
         opacity: $opacity-disabled;
+        background-color: var(--color-background-disabled);
         pointer-events: none;
         cursor: not-allowed;
     }
@@ -252,9 +255,9 @@ ul {
 .btn {
     padding: $space-300;
     font-weight: 500; 
-    color: $color-content-default;
+    color: var(--color-content-default);
     border-radius: $radius-200;
-    background-color: $color-background-neutral-subtle;
+    background-color: var(--color-background-neutral-subtle);
     .icon {
         &:first-child {
             margin-left: $space-150;
@@ -348,14 +351,14 @@ ul {
     }
     &-text {
         padding: 0!important;
-        color: $color-content-brand-default;
+        color: var(--color-content-brand-default);
         background-color: transparent;
         &:hover {
-            color: $color-content-brand-hover;
+            color: var(--color-content-brand-hover);
             text-decoration: none;
         }
         &:active {
-            color: $color-content-brand-active;
+            color: var(--color-content-brand-active);
         }
         span {
             margin: 0;
@@ -378,67 +381,67 @@ ul {
 $btn-config:(
 	neutral:(
 		class: 'neutral',
-		color: $color-content-default,
-		background: $color-background-neutral-subtle,
-        background-hover: $color-background-neutral-subtle-hover,
-        background-active: $color-background-neutral-subtle-active,
-        border-color: $color-border-bold
+		color: var(--color-content-default),
+		background: var(--color-background-neutral-subtle),
+        background-hover: var(--color-background-neutral-subtle-hover),
+        background-active: var(--color-background-neutral-subtle-active),
+        border-color: var(--color-border-bold)
 	),
 	primary:(
 		class: 'primary',
-		color: $color-content-inverse-bold,
-		background: $color-background-brand-default,
-        background-hover: $color-background-brand-hover,
-        background-active: $color-background-brand-active,
-        border-color: $color-border-inverse-plain
+		color: var(--color-content-inverse-bold),
+		background: var(--color-background-brand-default),
+        background-hover: var(--color-background-brand-hover),
+        background-active: var(--color-background-brand-active),
+        border-color: var(--color-border-inverse-plai)n
 	),
     prize:(
 		class: 'prize',
-		color: $color-content-fixed-bold,
-		background: $color-background-prize-default,
-        background-hover: $color-background-prize-hover,
-        background-active: $color-background-prize-active,
-        border-color: $color-border-fixed-bold
+		color: var(--color-content-fixed-bold),
+		background: var(--color-background-prize-default),
+        background-hover: var(--color-background-prize-hover),
+        background-active: var(--color-background-prize-active),
+        border-color: var(--color-border-fixed-bold)
 	),
 	danger:(
 		class: 'danger',
-		color: $color-content-inverse-bold,
-		background: $color-background-danger-default,
-        background-hover: $color-background-danger-hover,
-        background-active: $color-background-danger-active,
-        border-color: $color-border-inverse-plain
+		color: var(--color-content-inverse-bold),
+		background: var(--color-background-danger-default),
+        background-hover: var(--color-background-danger-hover),
+        background-active: var(--color-background-danger-active),
+        border-color: var(--color-border-inverse-plai)n
 	),
     outline: (
         class: 'outline',
-		color: $color-content-brand-default,
-		background: $color-background-transparent-default,
-        background-hover: $color-background-transparent-hover,
-        background-active: $color-background-transparent-active,
-        border-color: $color-border-brand
+		color: var(--color-content-brand-default),
+		background: var(--color-background-transparent-default),
+        background-hover: var(--color-background-transparent-hover),
+        background-active: var(--color-background-transparent-active),
+        border-color: var(--color-border-brand)
     ),
     ghost:(
 		class: 'ghost',
-		color: $color-content-brand-default,
-		background: $color-background-transparent-default,
-        background-hover: $color-background-transparent-hover,
-        background-active: $color-background-transparent-active,
-        border-color: $color-border-brand
+		color: var(--color-content-brand-default),
+		background: var(--color-background-transparent-default),
+        background-hover: var(--color-background-transparent-hover),
+        background-active: var(--color-background-transparent-active),
+        border-color: var(--color-border-brand)
 	),
     ghost-neutral:(
 		class: 'ghost-neutral',
-		color: $color-content-default,
-		background: $color-background-transparent-default,
-        background-hover: $color-background-transparent-hover,
-        background-active: $color-background-transparent-active,
-        border-color: $color-border-bold
+		color: var(--color-content-default),
+		background: var(--color-background-transparent-default),
+        background-hover: var(--color-background-transparent-hover),
+        background-active: var(--color-background-transparent-active),
+        border-color: var(--color-border-bold)
 	),
     white:(
 		class: 'white',
-		color: $color-content-brand-default,
-		background: $color-background-fixed-white,
-        background-hover: $color-background-transparent-hover,
-        background-active: $color-background-transparent-active,
-        border-color: $color-border-brand
+		color: var(--color-content-brand-default),
+		background: var(--color-background-fixed-white),
+        background-hover: var(--color-background-transparent-hover),
+        background-active: var(--color-background-transparent-active),
+        border-color: var(--color-border-brand)
 	)
 );
 
@@ -559,7 +562,7 @@ $btn-config:(
 
 .btn-fab {
     padding: $space-400;
-    box-shadow: $shadow-md;
+    box-shadow: $shadow-medium;
     .icon {
         font-size: 2rem;
     }
@@ -582,7 +585,7 @@ $btn-config:(
 //table
 table,
 .table {
-    border: 1px solid $color-border-default;
+    border: 1px solid var(--color-border-default);
     border-collapse: collapse;
     border-spacing: 0;
     overflow: hidden;
@@ -590,16 +593,16 @@ table,
         padding: $space-400;
     }
     thead {
-        background-color: $color-background-sunken;
+        background-color: var(--color-background-sunken);
         font-size: .875rem;
         font-weight: 500;
         th {
-            border-bottom: 1px solid $color-border-subtle;
+            border-bottom: 1px solid var(--color-border-subtle);
         }
     }
     tbody {
         td {
-            border-bottom: 1px solid $color-border-subtle;
+            border-bottom: 1px solid var(--color-border-subtle);
         }
         tr:last-child td {
             border-bottom: none;
@@ -630,15 +633,15 @@ table,
         height: 2rem;
         font-size: 1rem;
         font-weight: 500;
-        color: $color-content-subtlest;
-        background-color: $color-background-default;
-        border: 1px solid $color-border-subtle;
+        color: var(--color-content-subtlest);
+        background-color: var(--color-background-default);
+        border: 1px solid var(--color-border-subtle);
         border-radius: $radius-full;
         z-index: 1;
     }
     &-title {
         margin-top: $space-100;
-        color: $color-content-subtlest;
+        color: var(--color-content-subtlest);
     }
     &:before, &:after {
         content: '';
@@ -647,7 +650,7 @@ table,
         left: 0;
         width: 50%;
         height: 1px;
-        border-bottom: 1px solid $color-border-subtle;
+        border-bottom: 1px solid var(--color-border-subtle);
         z-index: 0;
     }
     &:after {
@@ -666,48 +669,48 @@ table,
     }
     &.completed {
         &:after, + .stepper:before {
-            border-color: $color-border-brand;
+            border-color: var(--color-border-brand);
         }
         .stepper {
             &-indicator {
                 border: none;
-                background-color: $color-background-brand-default;
-                color: $color-content-inverse-bold;
+                background-color: var(--color-background-brand-default);
+                color: var(--color-content-inverse-bold);
                 color: transparent;
                 font-family: 'icon-invos';
                 &:before {
                     content: '\e932';//icon-check
-                    color: $color-content-inverse-bold;
+                    color: var(--color-content-inverse-bold);
                     position: absolute;
                 }
             }
             &-title {
-                color: $color-content-default;
+                color: var(--color-content-default);
             }
         }
     }
     &.on-going {
         .stepper {
             &-indicator {
-                border-color: $color-border-brand;
-                color: $color-content-brand-default;
+                border-color: var(--color-border-brand);
+                color: var(--color-content-brand-default);
             }
             &-title {
-                color: $color-content-bold;
+                color: var(--color-content-bold);
             }
         }
     }
     &.error {
         &:after, + .stepper:before {
-            border-color: $color-border-danger;
+            border-color: var(--color-border-danger);
         }
         .stepper {
             &-indicator {
-                border-color: $color-border-danger;
-                color: $color-content-danger-default;
+                border-color: var(--color-border-danger);
+                color: var(--color-content-danger-default);
             }
             &-title {
-                color: $color-content-danger-default;
+                color: var(--color-content-danger-default);
             }
         }
     }
@@ -725,7 +728,7 @@ table,
 }
 input {
     &::placeholder {
-        color: $color-content-subtlest;
+        color: var(--color-content-subtlest);
     }
 }
 .input {
@@ -736,13 +739,13 @@ input {
     height: 3.5rem;
     font-size: 1rem;
     line-height: 1em;
-    color: $color-content-default;
-    border: 1px solid $color-border-default;
-    background-color: $color-background-default;
+    color: var(--color-content-default);
+    border: 1px solid var(--color-border-default);
+    background-color: var(--color-background-default);
     border-radius: $radius-200;
 
     &::placeholder {
-        color: $color-content-subtlest;
+        color: var(--color-content-subtlest);
     }
     &-container {
         position: relative;
@@ -766,7 +769,7 @@ input {
         top: 1rem;
         left: .75rem;
         font-size: 1rem;
-        color: $color-content-subtlest;
+        color: var(--color-content-subtlest);
         transition: all .2s ease;
         z-index: 2;
     }
@@ -780,7 +783,7 @@ input {
     &-footer {
         display: flex;
         margin-top: $space-200;
-        color: $color-content-subtle;
+        color: var(--color-content-subtle);
         .icon {
             position: relative;
             top: 1px;
@@ -791,34 +794,38 @@ input {
         padding-top: $space-650;
         padding-bottom: $space-150;
         ~ .input-label {
-            color: $color-content-subtle;
+            color: var(--color-content-subtle);
             font-size: 0.75rem;
             transform: translate(0, -$space-250);
         }
     }
     &:focus, &.focus {
         padding-left: calc($space-300 - 1px);
-        border: 2px solid $color-border-brand;
+        border: 2px solid var(--color-border-brand);
     }
     &.error {
         padding-left: calc($space-300 - 1px);
-        border: 2px solid $color-border-danger;
+        border: 2px solid var(--color-border-danger);
         ~ .input-label {
-            color: $color-content-danger-default;
+            color: var(--color-content-danger-default);
         }
         ~ .input-footer {
-            color: $color-content-danger-default;
+            color: var(--color-content-danger-default);
         }
     }
     &.disabled,&:disabled {
         pointer-events: none;
         cursor: not-allowed;
-        color: $color-content-subtle;
-        background-color: $color-background-sunken;
+        color: var(--color-content-subtle);
+        background-color: var(--color-background-disable);
+        ~ label {
+            pointer-events: none;
+            cursor: not-allowed;
+        }
         ~ .icon {
             pointer-events: none;
             cursor: not-allowed;
-            color: $color-content-subtlest;
+            color: var(--color-content-subtlest);
         }
     }
 }
@@ -834,9 +841,9 @@ input {
     font-size: 1.5rem;
     font-weight: 500;
     text-align: center;
-    color: $color-content-default;
-    border: 1px solid $color-border-default;
-    background-color: $color-background-default;
+    color: var(--color-content-default);
+    border: 1px solid var(--color-border-default);
+    background-color: var(--color-background-default);
     border-radius: $radius-200;
     &-container {
         display: flex;
@@ -844,16 +851,16 @@ input {
         justify-content: space-between;
     }
     &:focus, &.focus {
-        border: 2px solid $color-border-brand;
+        border: 2px solid var(--color-border-brand);
     }
     &.error {
-        border: 2px solid $color-border-danger;
+        border: 2px solid var(--color-border-danger);
     }
     &.disabled,&:disabled {
         pointer-events: none;
         cursor: not-allowed;
-        color: $color-content-subtle;
-        background-color: $color-background-sunken;
+        color: var(--color-content-subtle);
+        background-color: var(--color-background-disable);
     }
 }
 
@@ -862,8 +869,8 @@ input {
     width: 1.25rem;
     height: 1.25rem;
     margin-right: $space-200;
-    border: 2px solid $color-border-default;
-    background-color: $color-background-default;
+    border: 2px solid var(--color-border-default);
+    background-color: var(--color-background-default);
     border-radius: $radius-100;
     position: relative;
     top: 2px;
@@ -871,13 +878,13 @@ input {
         display: flex;
         justify-content: center;
         align-items: center;
-        border-color: $color-border-brand;
-        background-color: $color-background-brand-default;
+        border-color: var(--color-border-brand);
+        background-color: var(--color-background-brand-default);
         font-family: 'icon-invos';
         &:before {
             content: '\e933';//icon-check-bold
             font-size: 1rem;
-            color: $color-content-inverse-bold;
+            color: var(--color-content-inverse-bold);
         }
     }
     &-container {
@@ -894,12 +901,12 @@ input {
         width: 100%;
         margin-top: $space-50;
         padding-left: $space-700;
-        color: $color-content-subtle;
+        color: var(--color-content-subtle);
     }
     &.error {
-        border-color: $color-border-danger;
+        border-color: var(--color-border-danger);
         &:checked, [checked="checked"], .checked {
-            border-color: $color-border-brand;
+            border-color: var(--color-border-brand);
         }
     }
     &.disabled {
@@ -936,7 +943,7 @@ input {
     &-container {
         width: 100%;
         max-width: 480px;
-        background-color: $color-background-default;
+        background-color: var(--color-background-default);
         border-radius: $radius-200;
         overflow: hidden;
     }
@@ -962,7 +969,7 @@ input {
         bottom: 0;
         right: 0;
         z-index: -1;
-        background-color: $color-background-overlay;
+        background-color: var(--color-background-overlay);
     }
 
     &.bounceIn {
@@ -991,13 +998,13 @@ input {
         justify-content: center;
         align-items: center;
         height: 3rem;
-        border-bottom: 1px solid $color-border-subtle;
+        border-bottom: 1px solid var(--color-border-subtle);
         .btn-icon {
             height: inherit;
             border-radius: 0;
             .icon {
                 font-size: 1.5rem;
-                color: $color-content-default;
+                color: var(--color-content-default);
             }
         }
     }
@@ -1033,7 +1040,7 @@ input {
         display: block;
         width: 100%;
         height: 100%;
-        border: 3px solid $color-border-inverse-plain;
+        border: 3px solid var(--color-border-inverse-plain);
         border-radius: $radius-full;
     }
     &:before {
@@ -1109,9 +1116,9 @@ input {
         gap: $space-200;
         padding: $space-600;
         font-size: 3rem;
-        color: $color-content-inverse-bold;
+        color: var(--color-content-inverse-bold);
         border-radius: $radius-200;
-        background-color: $color-background-toast;
+        background-color: var(--color-background-toast);
     }
     &-text {
         
@@ -1133,8 +1140,8 @@ input {
     width: 100%;
     gap: $space-200;
     padding: $space-200 $space-300;
-    color: $color-content-default;
-    background-color: $color-background-neutral-subtle;
+    color: var(--color-content-default);
+    background-color: var(--color-background-neutral-subtle);
     border-radius: $radius-200;
     .icon {
         font-size: 1rem;
@@ -1145,23 +1152,23 @@ input {
         flex: 1;
     }
     &-primary {
-        color: $color-content-brand-bold;
-        background-color: $color-background-brand-subtlest;
+        color: var(--color-content-brand-bold);
+        background-color: var(--color-background-brand-subtlest);
     }
     &-neutral {
-        color: $color-content-default;
-        background-color: $color-background-neutral-subtle;
+        color: var(--color-content-default);
+        background-color: var(--color-background-neutral-subtle);
     }
     &-danger {
-        color: $color-content-danger-bold;
-        background-color: $color-background-danger-subtlest;
+        color: var(--color-content-danger-bold);
+        background-color: var(--color-background-danger-subtlest);
     }
     &-warning {
-        color: $color-content-warning-bold;
-        background-color: $color-background-warning-subtlest;
+        color: var(--color-content-warning-bold);
+        background-color: var(--color-background-warning-subtlest);
     }
     &-prize {
-        color: $color-content-prize-bold;
-        background-color: $color-background-prize-subtlest;
+        color: var(--color-content-prize-bold);
+        background-color: var(--color-background-prize-subtlest);
     }
 }
