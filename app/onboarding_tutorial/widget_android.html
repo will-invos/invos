@@ -45,7 +45,7 @@
             </ul>
             <div class="divider"></div>
             <h4>怎麼設定 Smart Watch 的小工具？</h4>
-            <button type="button" class="btn btn-neutral btn-md" id="btn-watch" onclick="showAlert(); sendEvent('android widget', 'click', 'android watch')">
+            <button type="button" class="btn btn-neutral btn-md" id="btn-watch" onclick="showAlert();">
                 <i class="icon icon-info"></i>
                 <span>瞭解更多</span>
             </button>
@@ -66,11 +66,19 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9YTDTDWTM"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'G-W9YTDTDWTM');
+        gtag('config', 'G-W9YTDTDWTM');
+
+        document.getElementById('btn-watch').addEventListener('click', function() {
+            gtag.event('click', {
+                category: 'android widget',
+                action: 'click',
+                label: 'android watch'
+            });
+        });
     </script>
 </body>
 </html>
