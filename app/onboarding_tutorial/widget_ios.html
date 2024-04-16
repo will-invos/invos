@@ -14,7 +14,7 @@
         <div class="section">
             <h4>什麼是桌面小工具？</h4>
             <img src="images/img_widget_ios.png" alt="" class="full-width">
-            <p>桌面小工具是一種可以放置在手機桌面或智慧手錶上的便利程式，讓您在結帳時可以快速出示發票載具或會員卡條碼，無需再點開 APP。</p>
+            <p>桌面小工具是讓您可以直接將條碼放置在手機桌面或 Apple Watch 上的功能，在結帳時便能快速出示載具條碼或會員卡條碼，無需解鎖手機或開啟 App。</p>
         </div>
 
         <div class="section">
@@ -23,7 +23,7 @@
                 <div class="pros-item">
                     <img src="images/img_show_widget.png" alt="">
                     <p class="pros-title">快速出示</p>
-                    <p class="body-sm">結帳時無需再開 APP</p>
+                    <p class="body-sm">結帳時無需再開 App</p>
                 </div>
                 <div class="pros-item">
                     <img src="images/img_carrier_memebrcard.png" alt="">
@@ -35,20 +35,32 @@
 
         <div class="section">
             <h4>怎麼設定 iPhone 的小工具？</h4>
-            <video class="demo" src="https://cdn.invos.com.tw/videos/ios_light_mode.mp4" autoplay loop muted preload="auto"></video>
+            <video id="myVideo">
+                <source src="https://cdn.invos.com.tw/videos/ios_light_mode.mp4" type="video/mp4">
+            </video>
+            <script>
+                const video = document.getElementById('myVideo');
+                
+                video.addEventListener('loadedmetadata', () => {
+                    video.muted = true;
+                    video.play();
+                });
+            </script>
+            <!-- <video class="demo" id="demo-video" src="https://cdn.invos.com.tw/videos/ios_light_mode.mp4" autoplay muted loop preload="auto"></video> -->
             <ul>
                 <li>在桌面上長按任意空白處。</li>
                 <li>點選左上角的「+」圖示。</li>
                 <li>找到「發票存摺」App。</li>
                 <li>選擇要加入的小工具尺寸。</li>
-                <li>將小工具拖曳到桌面上即可。</li>
+                <li>將小工具拖曳到最左側的桌面即設定完成</li>
             </ul>
+            <p>設定完成後，於螢幕鎖屏狀態往右滑，即可快速出示條碼！</p>
             <div class="divider"></div>
             <h4>怎麼設定 Apple Watch 的小工具？</h4>
             <img src="images/img_widget_applewatch.png" alt="" class="full-width">
             <ul>
                 <li>開啟 iPhone 上的「Watch」App，點選「我的手錶」頁面。</li>
-                <li>在「可用APP」區塊中，找到「發票存摺」App，點選「安裝」。</li>
+                <li>在「可用App」區塊中，找到「發票存摺」App，點選「安裝」。</li>
                 <li>如果畫面顯示「尚未登入」，請先開啟手機上的發票存摺 App 並登入與綁定載具。</li>
                 <li>完成後即可在 Apple Watch 上顯示載具條碼，也能右滑顯示會員卡功能喔！</li>
             </ul>
@@ -68,10 +80,20 @@
 
         <div class="section">
             <h4>為什麼我的桌面小工具會消失？</h4>
-            <p>由於 Apple 手機系統問題，當您在更新 app 後可能會無法正常顯示條碼，或是您曾移除過發票存摺 app。</p>
+            <p>由於 Apple 手機系統問題，當您在更新 App 後可能會無法正常顯示條碼，或是您曾移除過發票存摺 App。</p>
             <p>請先嘗試「重新開機」，大多時候小工具能即刻恢復正常。若仍無法正常，請按照上述步驟重新加入小工具。</p>
             <p>我們也會持續追蹤 Apple 是否有推出修正的系統版本，造成不便，敬請見諒。</p>
         </div>
     </div>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9YTDTDWTM"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W9YTDTDWTM');
+    </script>
 </body>
 </html>

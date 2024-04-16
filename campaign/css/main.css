@@ -13,9 +13,9 @@ body, html {
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: #F3F4F7;
+  background-color: var(--color-background-sunken);
   font-size: 16px;
-  color: #3B4049;
+  color: var(--color-content-default);
 }
 
 .container {
@@ -23,28 +23,28 @@ body, html {
   width: 100%;
   max-width: 480px;
   margin: 0 auto;
-  background-color: #FFFFFF;
+  background-color: var(--color-background-default);
 }
 .container.has-sheet {
   padding-bottom: 80px;
 }
 .container.bg-sunken {
-  background-color: #F3F4F7;
+  background-color: var(--color-background-sunken);
 }
 .container.hide {
   display: none;
 }
 
 .content {
-  background-color: #FFFFFF;
+  background-color: var(--color-background-default);
 }
 
 section {
   position: relative;
   width: 100%;
   padding: 8px 16px;
-  border-bottom: 1px solid #EAECF0;
-  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--color-border-divider);
+  background-color: var(--color-background-default);
 }
 section:last-child {
   border-bottom: none;
@@ -116,7 +116,7 @@ section .subtitle + .list {
 }
 
 #section-top {
-  border-bottom: 1px solid #EAECF0;
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 #section-prize {
   max-height: 536px;
@@ -129,7 +129,7 @@ section .subtitle + .list {
   width: 100%;
   padding: 16px;
   text-align: center;
-  background-color: #FFFFFF;
+  background-color: var(--color-background-default);
 }
 #section-prize.expand {
   max-height: none;
@@ -159,7 +159,7 @@ section .subtitle + .list {
   height: 120px;
   margin-bottom: 8px;
   border-radius: 8px;
-  background-color: #F3F4F7;
+  background-color: var(--color-background-sunken);
   background: center/contain no-repeat url(../images/bg-prize.png);
 }
 .prize-img img {
@@ -180,11 +180,11 @@ section .subtitle + .list {
   font-size: 1.5rem;
   line-height: 1em;
   font-weight: 500;
-  color: #FFFFFF;
+  color: var(--color-content-inverse-bold);
   background-color: var(--theme-primary);
   border-radius: 999px;
   transform: rotate(-15deg);
-  box-shadow: 0 0.125rem 0.25rem rgba(22, 25, 29, 0.2), 0 0 1px rgba(22, 25, 29, 0.2);
+  box-shadow: 0 0.125rem 0.25rem var(--color-shadow-default);
   z-index: 1;
 }
 .prize-img.show-badge.badge-sm:before {
@@ -214,7 +214,7 @@ section .subtitle + .list {
 .product-category {
   padding: 16px;
   border-radius: 8px;
-  background-color: #F3F4F7;
+  background-color: var(--color-background-sunken);
 }
 .product-category + .product-category {
   margin-top: 16px;
@@ -266,7 +266,7 @@ section .subtitle + .list {
 }
 
 .quesiton {
-  color: #16191D;
+  color: var(--color-content-bold);
   margin-bottom: 8px;
 }
 
@@ -275,24 +275,24 @@ section .subtitle + .list {
 }
 
 .table-primary {
-  border-color: #007ACC;
+  border-color: var(--color-border-brand);
 }
 .table-primary thead {
-  background-color: #E2F7FF;
-  color: #00437A;
+  background-color: var(--color-background-brand-subtlest);
+  color: var(--color-content-brand-bold);
 }
 .table-primary thead th {
-  border-color: #007ACC;
+  border-color: var(--color-border-brand);
 }
 .table-prize {
-  border-color: #F49A00;
+  border-color: var(--color-border-prize);
 }
 .table-prize thead {
-  background-color: #FFF6D8;
-  color: #633500;
+  background-color: var(--color-background-prize-subtlest);
+  color: var(--color-content-prize-bold);
 }
 .table-prize thead th {
-  border-color: #F49A00;
+  border-color: var(--color-border-prize);
 }
 
 .event-time .item-content .description {
@@ -300,7 +300,7 @@ section .subtitle + .list {
 }
 
 .has-theme .top-heading {
-  background-image: linear-gradient(var(--theme-primary-subtle), rgba(255, 255, 255, 0) 50%);
+  background-image: linear-gradient(var(--theme-primary-subtle), var(--color-background-transparent-default 50%));
 }
 .has-theme .btn-primary {
   background-color: var(--theme-primary);
@@ -343,7 +343,7 @@ section .subtitle + .list {
 }
 
 .faq a {
-  color: #3B4049;
+  color: var(--color-content-default);
 }
 
 .app-sheet {

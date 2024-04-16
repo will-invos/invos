@@ -717,6 +717,34 @@ code {
   letter-spacing: 1px;
 }
 
+.text-primary {
+  color: var(--color-content-brand);
+}
+
+.text-success {
+  color: var(--color-content-success-default);
+}
+
+.text-danger {
+  color: var(--color-content-danger-default);
+}
+
+.text-warning {
+  color: var(--color-content-warning-default);
+}
+
+.text-prize {
+  color: var(--color-content-prize-default);
+}
+
+.text-bold {
+  color: var(--color-content-bold);
+}
+
+.text-subtle {
+  color: var(--color-content-subtle);
+}
+
 @font-face {
   font-family: "icon-invos";
   src: url("fonts/icon-invos.ttf?3h8epm") format("truetype"), url("fonts/icon-invos.woff?3h8epm") format("woff"), url("fonts/icon-invos.svg?3h8epm#icon-invos") format("svg");
@@ -1716,7 +1744,7 @@ a:active {
   display: flex;
   justify-content: flex-start;
   border-bottom: 1px solid var(--color-border-divider);
-  background-color: white;
+  background-color: var(--color-background-default);
 }
 .tablist .tab {
   height: 3rem;

@@ -17,9 +17,9 @@ body, html {
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: $color-background-sunken;
+    background-color: var(--color-background-sunken);
     font-size: 16px;
-    color: $color-content-default;
+    color: var(--color-content-default);
 }
 
 .container {
@@ -27,12 +27,12 @@ body, html {
     width: 100%;
     max-width: 480px;
     margin: 0 auto;
-    background-color: $color-background-default;
+    background-color: var(--color-background-default);
     &.has-sheet {
         padding-bottom: $space-2000;
     }
     &.bg-sunken {
-        background-color: $color-background-sunken;
+        background-color: var(--color-background-sunken);
     }
     &.hide {
         display: none;
@@ -40,15 +40,15 @@ body, html {
 }
 
 .content {
-    background-color: $color-background-default;
+    background-color: var(--color-background-default);
 }
 
 section {
     position: relative;
     width: 100%;
     padding: $space-200 $space-400;
-    border-bottom: $divider;
-    background-color: $color-background-default;
+    border-bottom: 1px solid var(--color-border-divider);
+    background-color: var(--color-background-default);
 
     &:last-child {
         border-bottom: none;
@@ -125,7 +125,7 @@ section {
 
 #section {
     &-top {
-        border-bottom: 1px solid $color-border-subtle;
+        border-bottom: 1px solid var(--color-border-subtle);
     }
     &-prize {
         max-height: 536px;
@@ -137,7 +137,7 @@ section {
             width: 100%;
             padding: $space-400;
             text-align: center;
-            background-color: $color-background-default;
+            background-color: var(--color-background-default);
         }
         &.expand {
             max-height: none;
@@ -170,7 +170,7 @@ section {
         height: 120px;
         margin-bottom: $space-200;
         border-radius: $radius-200;
-        background-color: $color-background-sunken;
+        background-color: var(--color-background-sunken);
         background: center / contain no-repeat url(../images/bg-prize.png);
         img {
             width: 100%;
@@ -191,11 +191,11 @@ section {
                 font-size: 1.5rem;
                 line-height: 1em;
                 font-weight: $font-weight-medium;
-                color: $color-content-inverse-bold;
+                color: var(--color-content-inverse-bold);
                 background-color: var(--theme-primary);
                 border-radius: $radius-full;
                 transform: rotate(-15deg);
-                box-shadow: $shadow-sm;
+                box-shadow: $shadow-small;
                 z-index: 1;
             }
             &.badge-sm {
@@ -235,7 +235,7 @@ section {
     &-category {
         padding: $space-400;
         border-radius: $radius-200;
-        background-color: $color-background-sunken;
+        background-color: var(--color-background-sunken);
         + .product-category {
             margin-top: $space-400;
         }
@@ -288,7 +288,7 @@ section {
     }
 }
 .quesiton {
-    color: $color-content-bold;
+    color: var(--color-content-bold);
     margin-bottom: $space-200;
 }
 .answer {
@@ -299,22 +299,22 @@ section {
 
 .table {
     &-primary {
-        border-color: $color-border-brand;
+        border-color: var(--color-border-brand);
         thead {
-            background-color: $color-background-brand-subtlest;
-            color: $color-content-brand-bold;
+            background-color: var(--color-background-brand-subtlest);
+            color: var(--color-content-brand-bold);
             th {
-                border-color: $color-border-brand;
+                border-color: var(--color-border-brand);
             }
         }
     }
     &-prize {
-        border-color: $color-border-prize;
+        border-color: var(--color-border-prize);
         thead {
-            background-color: $color-background-prize-subtlest;
-            color: $color-content-prize-bold;
+            background-color: var(--color-background-prize-subtlest);
+            color: var(--color-content-prize-bold);
             th {
-                border-color: $color-border-prize;
+                border-color: var(--color-border-prize);
             }
         }
     }
@@ -329,7 +329,7 @@ section {
 
 .has-theme {
     .top-heading {
-        background-image: linear-gradient(var(--theme-primary-subtle), $color-background-transparent-default 50%);
+        background-image: linear-gradient(var(--theme-primary-subtle), var(--color-background-transparent-default 50%));
     }
     .btn {
         &-primary {
@@ -378,7 +378,7 @@ section {
 
 .faq {
     a {
-        color: $color-content-default;
+        color: var(--color-content-default);
     }
 }
 

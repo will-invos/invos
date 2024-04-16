@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>存入發票</title>
+    <title>存入雲端發票</title>
     <script src="../js/jquery-3.7.1.min.js"></script>
 </head>
 <body>
@@ -15,19 +15,19 @@
             <h4>將發票存入 App 的好處</h4>
             <div class="pros">
                 <div class="pros-item">
-                    <img src="images/img_expense_analysis.png" alt="">
-                    <p class="pros-title">消費分析</p>
-                    <p class="pros-des body-sm">圖像化每月消費重點</p>
-                </div>
-                <div class="pros-item">
                     <img src="images/img_match_numbers.png" alt="">
-                    <p class="pros-title">定期對獎</p>
-                    <p class="pros-des body-sm">一秒完成對獎免手動</p>
+                    <p class="pros-title">一鍵對獎</p>
+                    <p class="pros-des body-sm">開獎提醒對獎不錯過</p>
                 </div>
                 <div class="pros-item">
                     <img src="images/img_accounting.png" alt="">
-                    <p class="pros-title">幫助記帳</p>
-                    <p class="pros-des body-sm">隨時查閱發票明細</p>
+                    <p class="pros-title">方便記帳</p>
+                    <p class="pros-des body-sm">發票自動存免手動記帳</p>
+                </div>
+                <div class="pros-item">
+                    <img src="images/img_expense_analysis.png" alt="">
+                    <p class="pros-title">消費分析</p>
+                    <p class="pros-des body-sm">圖像化每月消費重點</p>
                 </div>
                 <div class="pros-item">
                     <img src="images/img_extra_prize.png" alt="">
@@ -38,18 +38,18 @@
         </div>
 
         <div class="section">
-            <h4>我要如何存入發票？</h4>
+            <h4>我要如何存入雲端發票？</h4>
             <img src="images/img_carrier.png" alt="" class="full-width">
-            <p>在結帳時，向店家出示您的載具條碼，完成掃描後即可將發票存入財政部雲端，後續待 App 同步完成便可查閱發票明細。</p>
-            <div class="alert alert-neutral">
-                <i class="icon icon-info"></i>
+            <p>結帳時向店家出示您的載具條碼，完成掃描後即代表消費存入財政部雲端，待店家將發票資料上傳至財政部且 App 同步完成便可查閱發票明細。</p>
+            <div class="alert alert-prize">
+                <i class="icon icon-coin"></i>
                 <span class="body-md">將發票存入雲端可以加碼對雲端專屬獎，額外獲得一百萬、兩千、八百與五百元的機會！</span>
             </div>
 
             <div class="divider"></div>
-            <h4>我的發票何時會存入？</h4>
+            <h4>何時可以在 App 上查詢發票？</h4>
             <ol>
-                <li class="text-danger">發票存入載具後，同步到 App 約需要兩天，請耐心等候！</li>
+                <li>發票存入載具後，<span class="text-danger">待店家上傳並同步到 App 至多需要兩天</span>，請耐心等候！</li>
                 <li>如果發票沒有完整存入，請下拉列表重新同步，完成後將會通知您。</li>
                 <li>建議您常回來 App 同步發票，發票對獎日才能準確地核對所有發票。</li>
                 <li>開啟 App 的通知權限，才能即時收到發票存入的通知！</li>
@@ -67,5 +67,15 @@
             </ul>
         </div>
     </div>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9YTDTDWTM"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W9YTDTDWTM');
+    </script>
 </body>
 </html>

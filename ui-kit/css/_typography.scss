@@ -114,3 +114,25 @@ code {
         @include label-base;
     }
 }
+
+.text-primary {
+    color: var(--color-content-brand);
+}
+.text-success {
+    color: var(--color-content-success-default);
+}
+.text-danger {
+    color: var(--color-content-danger-default);
+}
+.text-warning {
+    color: var(--color-content-warning-default);
+}
+.text-prize {
+    color: var(--color-content-prize-default);
+}
+.text-bold {
+    color: var(--color-content-bold);
+}
+.text-subtle {
+    color: var(--color-content-subtle);
+}
