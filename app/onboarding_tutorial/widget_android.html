@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="css/style.css">
     <title>桌面小工具 - Android</title>
     <script src="../js/jquery-3.7.1.min.js"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9YTDTDWTM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9YTDTDWTM');
+    </script>
 </head>
 <body>
     <div class="container">
@@ -62,23 +72,5 @@
             <p>請先改為開啟 App 掃描條碼，我們也會持續追蹤 Google 是否有推出修正的系統版本，造成不便，敬請見諒。</p>
         </div>
     </div>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9YTDTDWTM"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-W9YTDTDWTM');
-
-        document.getElementById('btn-watch').addEventListener('click', function() {
-            // gtag.event('click', {
-            //     category: 'Android widget',
-            //     action: 'Click',
-            //     label: 'Android watch'
-            // });
-        });
-    </script>
 </body>
 </html>
