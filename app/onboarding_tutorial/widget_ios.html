@@ -35,19 +35,8 @@
 
         <div class="section">
             <h4>怎麼設定 iPhone 的小工具？</h4>
-            <video id="myVideo">
-                <source src="https://cdn.invos.com.tw/videos/ios_light_mode.mp4" type="video/mp4">
-            </video>
-            <script>
-                const video = document.getElementById('myVideo');
-                
-                video.addEventListener('loadedmetadata', () => {
-                    video.muted = true;
-                    video.play();
-                });
-            </script>
-            <!-- <video class="demo" id="demo-video" src="https://cdn.invos.com.tw/videos/ios_light_mode.mp4" autoplay muted loop preload="auto"></video> -->
-            <ul>
+            <video class="demo" id="demo-video" src="https://cdn.invos.com.tw/videos/ios_light_mode.mp4" autoplay muted loop controls preload="auto" onclick="gtag('event', 'click', {event_category: 'iOS widget', event_action: 'Click', event_label: 'play video' });"></video>
+            <ul>fff
                 <li>在桌面上長按任意空白處。</li>
                 <li>點選左上角的「+」圖示。</li>
                 <li>找到「發票存摺」App。</li>
