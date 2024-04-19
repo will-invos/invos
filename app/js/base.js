@@ -1,8 +1,8 @@
 $(document).ready(function(){
-    $('.dialog-footer .btn').on('click', function(){
+    $('.dialog .btn-close, .dialog-footer .btn, .modal-overlay').on('click', function(){
         $(this).parents('.dialog').addClass('hide');
     });
-    $('.sheet .btn-close, .sheet-footer .btn, .sheet-overlay').on('click', function(){
+    $('.sheet .btn-close, .sheet-footer .btn, .modal-overlay').on('click', function(){
         $(this).parents('.sheet').addClass('hide');
     });
 });
