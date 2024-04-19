@@ -1187,7 +1187,7 @@ input {
     right: 0;
     width: 100%;
     height: 100%;
-    padding: $space-400;
+    padding: $space-600;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1217,14 +1217,17 @@ input {
         transition: all .2s ease-out;
     }
     &-body {
-        padding: $space-400;
+        padding: $space-600;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+        p:last-child {
+            margin-bottom: 0;
+        }
     }
     &-footer {
         display: flex;
-        padding: $space-400;
+        padding: 0 $space-600 $space-600;
         gap: $space-400;
         > .btn {
            flex: 1;

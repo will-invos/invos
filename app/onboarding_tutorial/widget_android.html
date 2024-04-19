@@ -73,26 +73,14 @@
     </div>
     <!-- /container -->
 
-    <div class="sheet hide">
+    <div class="dialog hide">
         <div class="modal-overlay"></div>
-        <div class="sheet-container">
-            <div class="sheet-header">
-                <div class="action">
-                    <div class="left">
-                        <button type="button" class="btn-icon btn-ghost-neutral btn-md btn-close">
-                            <i class="icon icon-cross"></i>
-                        </button>
-                    </div>
-                    <div class="right"></div>
-                </div>
-                <div class="content">
-                    <h3>Smart watch 小工具</h3>
-                </div>
+        <div class="dialog-container">
+            <div class="dialog-body">
+                <h3>Smart watch 小工具</h3>
+                <p>很抱歉，目前尚未支援 Android 智慧手錶的小工具，我們正在努力開發中，請耐心等候！</p>
             </div>
-            <div class="sheet-body">
-                很抱歉，目前尚未支援 Android 智慧手錶的小工具，我們正在努力開發中，請耐心等候！
-            </div>
-            <div class="sheet-footer">
+            <div class="dialog-footer">
                 <button class="btn btn-neutral btn-lg btn-close">瞭解</button>
             </div>
         </div>
@@ -107,7 +95,7 @@
 
         $(document).ready(function(){
             $('#btn-watch').on('click', function(){
-                $('.sheet').removeClass('hide');
+                $('.dialog').removeClass('hide');
             });
         });
     </script>
