@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>桌面小工具 - Android</title>
     <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/base.js"></script>
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9YTDTDWTM"></script>
@@ -58,36 +59,10 @@
             </div>
             <div class="divider"></div>
             <h4>怎麼設定 Smart Watch 的小工具？</h4>
-            <button type="button" class="btn btn-outline btn-md" id="btn-watch" onclick="gtag('event', 'click', {event_category: 'Android widget', event_action: 'Click', event_label: 'Android watch' }); showAlert();">
+            <button type="button" class="btn btn-outline btn-md" id="btn-watch" onclick="gtag('event', 'click', {event_category: 'Android widget', event_action: 'Click', event_label: 'Android watch' });">
                 <i class="icon icon-info"></i>
                 <span>瞭解更多</span>
             </button>
-
-            <div class="dialog hide">
-                <div class="dialog-container">
-                    <div class="dialog-header">
-                        <h3>瞭解 Smart Watch 小工具</h3>
-                    </div>
-                    <div class="dialog-body">
-                        <p>尚未支援 Android 智慧手錶的小工具，我們正在努力開發中，請耐心等候！</p>
-                    </div>
-                    <div class="dialog-footer">
-                        <button class="btn btn-neutral btn-lg">瞭解</button>
-                    </div>
-                </div>
-            </div>
-
-            <script>
-                function showAlert() {
-                  alert("尚未支援 Android 智慧手錶的小工具，我們正在努力開發中，請耐心等候！");
-                }
-
-                $(document).ready(function(){
-                    $('#btn-watch').on('click', function(){
-                        $('.dialog').toggleClass('hide');
-                    });
-                });
-            </script>
         </div>
 
         <div class="section">
@@ -96,5 +71,45 @@
             <p>請先改為開啟 App 掃描條碼，我們也會持續追蹤 Google 是否有推出修正的系統版本，造成不便，敬請見諒。</p>
         </div>
     </div>
+    <!-- /container -->
+
+    <div class="sheet hide">
+        <div class="sheet-overlay"></div>
+        <div class="sheet-container">
+            <div class="sheet-header">
+                <div class="action">
+                    <div class="left">
+                        <button type="button" class="btn-icon btn-ghost-neutral btn-md btn-close">
+                            <i class="icon icon-cross"></i>
+                        </button>
+                    </div>
+                    <div class="right"></div>
+                </div>
+                <div class="content">
+                    <h3>Smart watch 小工具</h3>
+                </div>
+            </div>
+            <div class="sheet-body">
+                很抱歉，目前尚未支援 Android 智慧手錶的小工具，我們正在努力開發中，請耐心等候！
+            </div>
+            <div class="sheet-footer">
+                <button class="btn btn-neutral btn-lg btn-close">瞭解</button>
+            </div>
+        </div>
+    </div>
+    <!-- /bottom sheet -->
+
+    <script>
+        // function showAlert() {
+        //   alert("尚未支援 Android 智慧手錶的小工具，我們正在努力開發中，請耐心等候！");
+        // }
+        //Android 嵌入在原生頁面的 web view 無法執行 Alert function，改為手動刻
+
+        $(document).ready(function(){
+            $('#btn-watch').on('click', function(){
+                $('.sheet').removeClass('hide');
+            });
+        });
+    </script>
 </body>
 </html>
