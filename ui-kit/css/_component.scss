@@ -196,14 +196,6 @@ ul {
     }
 }
 
-//Sheets
-.sheet {
-    padding: $space-400;
-    width: 100%;
-    background: var(--color-background-default);
-    border-top: 1px solid var(--color-border-divider);
-}
-
 //Buttons
 .btn, .btn-icon {
     position: relative;
@@ -1171,4 +1163,148 @@ input {
         color: var(--color-content-prize-bold);
         background-color: var(--color-background-prize-subtlest);
     }
+}
+
+//modal-overlay
+.modal-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-background-overlay);
+    opacity: 1;
+    z-index: 0;
+}
+.hide .modal-overlay {
+    opacity: 0;
+}
+
+//dialog
+.dialog {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding: $space-400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease-out;
+    z-index: 999;
+    pointer-events: auto;
+    opacity: 1;
+    transition: all .2s ease-out;
+    &.hide {
+        z-index: -999;
+        pointer-events: none;
+        opacity: 0;
+        .dialog-container {
+            transform: scale(0.8);
+        }
+    }
+    &-container {
+        width: 100%;
+        max-width: 640px;
+        border-radius: $radius-400;
+        background-color: var(--color-background-default);
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        transform: scale(1);
+        transition: all .2s ease-out;
+    }
+    &-body {
+        padding: $space-400;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    &-footer {
+        display: flex;
+        padding: $space-400;
+        gap: $space-400;
+        > .btn {
+           flex: 1;
+        }
+    }
+    
+}
+
+//bottom sheet
+.sheet {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 999;
+    pointer-events: auto;
+    opacity: 1;
+    transition: all .2s ease-out;
+    &.hide {
+        z-index: -999;
+        pointer-events: none;
+        opacity: 0;
+        .sheet-container {
+            bottom: -100%;
+        }
+    }
+    &-container {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border-radius: $radius-400 $radius-400 0 0;
+        background-color: var(--color-background-default);
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        transition: all .2s ease-out;
+    }
+    &-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .action {
+            height: 3rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: $space-400;
+            padding: $space-100;
+            .btn-icon {
+                &:hover {
+                    background: transparent;
+                }
+            }
+        }
+        .content {
+            padding: 0 $space-400;
+        }
+    }
+    &-body {
+        padding: 0 $space-400 $space-400;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    &-footer {
+        display: flex;
+        padding: $space-400;
+        gap: $space-400;
+        border-top: 1px solid var(--color-border-subtle);
+        > .btn {
+           flex: 1;
+        }
+    }
+    
 }

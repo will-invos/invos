@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/base.js"></script>
     <title>Invos Web UI kit</title>
 </head>
 <body>
@@ -465,7 +466,6 @@
                             <span class="body-md stepper-title">inactive</span>
                         </div>
                     </div>
-                    
                 </div>
             </div>
 
@@ -573,6 +573,86 @@
             </div>
         </section>
         <!-- /section-hint -->
+
+        <section id="section-dialog">
+            <h3 class="heading-md title">Dialog</h3>
+            <div id="badic-dialog">
+                <h5 class="heading-xs subtitle">Basic dialog</h5>
+                <div class="flex-container">
+                    <button type="button" class="btn btn-neutral btn-lg btn-open-dialog">
+                        <span>Open dialog</span>
+                    </button>
+                    <script>
+                        $(document).ready(function(){
+                            $('.btn-open-dialog').on('click', function(){
+                                $('.dialog').removeClass('hide');
+                            });
+                        });
+                    </script>
+                    <div class="dialog hide">
+                        <div class="modal-overlay"></div>
+                        <div class="dialog-container">
+                            <div class="dialog-body">
+                                <h3>Headline</h3>
+                                <p>Description</p>
+                            </div>
+                            <div class="dialog-footer">
+                                <button class="btn btn-neutral btn-lg btn-close">Cancel</button>
+                                <button class="btn btn-primary btn-lg">Confirm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /section-dialog -->
+
+        <section id="section-sheet">
+            <h3 class="heading-md title">sheet</h3>
+            <div id="badic-sheet">
+                <h5 class="heading-xs subtitle">Basic sheet</h5>
+                <div class="flex-container">
+                    <button type="button" class="btn btn-neutral btn-lg btn-open-sheet">
+                        <span>Open sheet</span>
+                    </button>
+                    <script>
+                        $(document).ready(function(){
+                            $('.btn-open-sheet').on('click', function(){
+                                $('.sheet').removeClass('hide');
+                            });
+                        });
+                    </script>
+                    <div class="sheet hide">
+                        <div class="modal-overlay"></div>
+                        <div class="sheet-container">
+                            <div class="sheet-header">
+                                <div class="action">
+                                    <div class="left">
+                                        <button type="button" class="btn-icon btn-ghost-neutral btn-md btn-close">
+                                            <i class="icon icon-cross"></i>
+                                        </button>
+                                    </div>
+                                    <div class="right">
+    
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h3>Headline</h3>
+                                </div>
+                            </div>
+                            <div class="sheet-body">
+                                <p>Description</p>
+                            </div>
+                            <div class="sheet-footer">
+                                <button class="btn btn-neutral btn-lg btn-close-sheet">Cancel</button>
+                                <button class="btn btn-primary btn-lg">Confirm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /section-dialog -->
 
     </div>
     <!-- /container -->

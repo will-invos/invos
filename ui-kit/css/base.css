@@ -203,13 +203,13 @@
   --color-background-success-subtle: var(--green-300);
   --color-background-success-subtlest: var(--green-100);
   --color-background-sunken: var(--gray-50);
-  --color-background-theme-apple-active: var(--theme-red-700);
-  --color-background-theme-apple-bold: var(--theme-red-700);
-  --color-background-theme-apple-boldest: var(--theme-red-800);
-  --color-background-theme-apple-default: var(--theme-red-500);
-  --color-background-theme-apple-hover: var(--theme-red-600);
-  --color-background-theme-apple-subtle: var(--theme-red-300);
-  --color-background-theme-apple-subtlest: var(--theme-red-100);
+  --color-background-theme-Apple-active: var(--theme-red-700);
+  --color-background-theme-Apple-bold: var(--theme-red-700);
+  --color-background-theme-Apple-boldest: var(--theme-red-800);
+  --color-background-theme-Apple-default: var(--theme-red-500);
+  --color-background-theme-Apple-hover: var(--theme-red-600);
+  --color-background-theme-Apple-subtle: var(--theme-red-300);
+  --color-background-theme-Apple-subtlest: var(--theme-red-100);
   --color-background-theme-girl-active: var(--theme-pink-700);
   --color-background-theme-girl-bold: var(--theme-pink-700);
   --color-background-theme-girl-boldest: var(--theme-pink-800);
@@ -278,7 +278,7 @@
   --color-border-prize: var(--yellow-400);
   --color-border-subtle: var(--gray-100);
   --color-border-success: var(--green-500);
-  --color-border-theme-apple: var(--theme-red-500);
+  --color-border-theme-Apple: var(--theme-red-500);
   --color-border-theme-girl: var(--theme-pink-500);
   --color-border-theme-green: var(--theme-green-500);
   --color-border-theme-lake: var(--theme-teal-500);
@@ -333,11 +333,11 @@
   --color-content-success-default: var(--green-500);
   --color-content-success-hover: var(--green-600);
   --color-content-success-subtle: var(--green-200);
-  --color-content-theme-apple-active: var(--theme-red-700);
-  --color-content-theme-apple-bold: var(--theme-red-700);
-  --color-content-theme-apple-default: var(--theme-red-500);
-  --color-content-theme-apple-hover: var(--theme-red-600);
-  --color-content-theme-apple-subtle: var(--theme-red-200);
+  --color-content-theme-Apple-active: var(--theme-red-700);
+  --color-content-theme-Apple-bold: var(--theme-red-700);
+  --color-content-theme-Apple-default: var(--theme-red-500);
+  --color-content-theme-Apple-hover: var(--theme-red-600);
+  --color-content-theme-Apple-subtle: var(--theme-red-200);
   --color-content-theme-girl-active: var(--theme-pink-700);
   --color-content-theme-girl-bold: var(--theme-pink-700);
   --color-content-theme-girl-default: var(--theme-pink-500);
@@ -437,13 +437,13 @@
     --color-background-success-subtle: var(--green-700);
     --color-background-success-subtlest: var(--green-800);
     --color-background-sunken: var(--gray-900);
-    --color-background-theme-apple-active: var(--theme-red-200);
-    --color-background-theme-apple-bold: var(--theme-red-300);
-    --color-background-theme-apple-boldest: var(--theme-red-100);
-    --color-background-theme-apple-default: var(--theme-red-400);
-    --color-background-theme-apple-hover: var(--theme-red-300);
-    --color-background-theme-apple-subtle: var(--theme-red-700);
-    --color-background-theme-apple-subtlest: var(--theme-red-800);
+    --color-background-theme-Apple-active: var(--theme-red-200);
+    --color-background-theme-Apple-bold: var(--theme-red-300);
+    --color-background-theme-Apple-boldest: var(--theme-red-100);
+    --color-background-theme-Apple-default: var(--theme-red-400);
+    --color-background-theme-Apple-hover: var(--theme-red-300);
+    --color-background-theme-Apple-subtle: var(--theme-red-700);
+    --color-background-theme-Apple-subtlest: var(--theme-red-800);
     --color-background-theme-girl-active: var(--theme-pink-200);
     --color-background-theme-girl-bold: var(--theme-pink-300);
     --color-background-theme-girl-boldest: var(--theme-pink-100);
@@ -512,7 +512,7 @@
     --color-border-prize: var(--yellow-300);
     --color-border-subtle: var(--gray-700);
     --color-border-success: var(--green-400);
-    --color-border-theme-apple: var(--theme-red-400);
+    --color-border-theme-Apple: var(--theme-red-400);
     --color-border-theme-girl: var(--theme-pink-400);
     --color-border-theme-green: var(--theme-green-400);
     --color-border-theme-lake: var(--theme-teal-400);
@@ -567,11 +567,11 @@
     --color-content-success-default: var(--green-400);
     --color-content-success-hover: var(--green-300);
     --color-content-success-subtle: var(--green-700);
-    --color-content-theme-apple-active: var(--theme-red-200);
-    --color-content-theme-apple-bold: var(--theme-red-200);
-    --color-content-theme-apple-default: var(--theme-red-400);
-    --color-content-theme-apple-hover: var(--theme-red-300);
-    --color-content-theme-apple-subtle: var(--theme-red-700);
+    --color-content-theme-Apple-active: var(--theme-red-200);
+    --color-content-theme-Apple-bold: var(--theme-red-200);
+    --color-content-theme-Apple-default: var(--theme-red-400);
+    --color-content-theme-Apple-hover: var(--theme-red-300);
+    --color-content-theme-Apple-subtle: var(--theme-red-700);
     --color-content-theme-girl-active: var(--theme-pink-200);
     --color-content-theme-girl-bold: var(--theme-pink-200);
     --color-content-theme-girl-default: var(--theme-pink-400);
@@ -1821,13 +1821,6 @@ ul {
   padding: 16px 0;
 }
 
-.sheet {
-  padding: 16px;
-  width: 100%;
-  background: var(--color-background-default);
-  border-top: 1px solid var(--color-border-divider);
-}
-
 .btn, .btn-icon {
   position: relative;
   display: inline-flex;
@@ -2787,4 +2780,142 @@ input::placeholder {
 .alert-prize {
   color: var(--color-content-prize-bold);
   background-color: var(--color-background-prize-subtlest);
+}
+
+.modal-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-background-overlay);
+  opacity: 1;
+  z-index: 0;
+}
+
+.hide .modal-overlay {
+  opacity: 0;
+}
+
+.dialog {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-out;
+  z-index: 999;
+  pointer-events: auto;
+  opacity: 1;
+  transition: all 0.2s ease-out;
+}
+.dialog.hide {
+  z-index: -999;
+  pointer-events: none;
+  opacity: 0;
+}
+.dialog.hide .dialog-container {
+  transform: scale(0.8);
+}
+.dialog-container {
+  width: 100%;
+  max-width: 640px;
+  border-radius: 16px;
+  background-color: var(--color-background-default);
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  transform: scale(1);
+  transition: all 0.2s ease-out;
+}
+.dialog-body {
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.dialog-footer {
+  display: flex;
+  padding: 16px;
+  gap: 16px;
+}
+.dialog-footer > .btn {
+  flex: 1;
+}
+
+.sheet {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 999;
+  pointer-events: auto;
+  opacity: 1;
+  transition: all 0.2s ease-out;
+}
+.sheet.hide {
+  z-index: -999;
+  pointer-events: none;
+  opacity: 0;
+}
+.sheet.hide .sheet-container {
+  bottom: -100%;
+}
+.sheet-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+  background-color: var(--color-background-default);
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  transition: all 0.2s ease-out;
+}
+.sheet-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.sheet-header .action {
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 4px;
+}
+.sheet-header .action .btn-icon:hover {
+  background: transparent;
+}
+.sheet-header .content {
+  padding: 0 16px;
+}
+.sheet-body {
+  padding: 0 16px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.sheet-footer {
+  display: flex;
+  padding: 16px;
+  gap: 16px;
+  border-top: 1px solid var(--color-border-subtle);
+}
+.sheet-footer > .btn {
+  flex: 1;
 }/*# sourceMappingURL=base.css.map */
