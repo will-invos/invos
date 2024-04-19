@@ -58,22 +58,33 @@
             </div>
             <div class="divider"></div>
             <h4>怎麼設定 Smart Watch 的小工具？</h4>
-            <button type="button" class="btn btn-outline btn-md" id="btn-watch" onclick="gtag('event', 'click', {event_category: 'Android widget', event_action: 'Click', event_label: 'Android watch' });">
+            <button type="button" class="btn btn-outline btn-md" id="btn-watch" onclick="gtag('event', 'click', {event_category: 'Android widget', event_action: 'Click', event_label: 'Android watch' }); showAlert();">
                 <i class="icon icon-info"></i>
                 <span>瞭解更多</span>
             </button>
-            <div class="hint hint-spinner hide" id="hint">
-                <div class="hint-container">
-                    <div class="spinner spinner-xxl"></div>
+
+            <div class="dialog hide">
+                <div class="dialog-container">
+                    <div class="dialog-header">
+                        <h3>瞭解 Smart Watch 小工具</h3>
+                    </div>
+                    <div class="dialog-body">
+                        <p>尚未支援 Android 智慧手錶的小工具，我們正在努力開發中，請耐心等候！</p>
+                    </div>
+                    <div class="dialog-footer">
+                        <button class="btn btn-neutral btn-lg">瞭解</button>
+                    </div>
                 </div>
             </div>
+
             <script>
                 function showAlert() {
                   alert("尚未支援 Android 智慧手錶的小工具，我們正在努力開發中，請耐心等候！");
                 }
+
                 $(document).ready(function(){
                     $('#btn-watch').on('click', function(){
-                        $('#hint').toggleClass('hide');
+                        $('.dialog').toggleClass('hide');
                     });
                 });
             </script>
